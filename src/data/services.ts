@@ -1,0 +1,123 @@
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  benefits: string[];
+  icon: string;
+  category: 'kitchen' | 'interior';
+}
+
+export const services: Service[] = [
+  {
+    id: 'modular-kitchen-design',
+    title: 'Modular Kitchen Design',
+    description: 'Transform your kitchen space with our expert design consultations. We craft personalized layouts tailored to your lifestyle, space, and aesthetic preferences.',
+    benefits: ['3D Design Visualization', 'Space Optimization', 'Personalized Layouts', 'Material Consultation'],
+    icon: 'LayoutDashboard',
+    category: 'kitchen',
+  },
+  {
+    id: 'modular-kitchen-manufacturing',
+    title: 'Modular Kitchen Manufacturing',
+    description: 'Precision-crafted modular kitchen units manufactured in our state-of-the-art facility using premium-grade materials and advanced machinery.',
+    benefits: ['Premium Quality Materials', 'In-House Manufacturing', 'Quality Assurance', 'Custom Sizing'],
+    icon: 'Factory',
+    category: 'kitchen',
+  },
+  {
+    id: 'l-shaped-kitchen',
+    title: 'L-Shaped Kitchens',
+    description: 'Maximize corner spaces with our elegant L-shaped kitchen solutions — perfect for medium-sized kitchens that need efficient workflow and ample storage.',
+    benefits: ['Efficient Work Triangle', 'Maximum Storage', 'Great for Medium Spaces', 'Open Layout Friendly'],
+    icon: 'CornerUpRight',
+    category: 'kitchen',
+  },
+  {
+    id: 'u-shaped-kitchen',
+    title: 'U-Shaped Kitchens',
+    description: 'Surround yourself with functionality. Our U-shaped kitchens offer maximum counter space and storage, ideal for serious home chefs.',
+    benefits: ['Maximum Counter Space', 'Three-Wall Storage', 'Professional Feel', 'Ideal for Large Kitchens'],
+    icon: 'Square',
+    category: 'kitchen',
+  },
+  {
+    id: 'parallel-kitchen',
+    title: 'Parallel Kitchens',
+    description: 'Efficient and sleek — our parallel kitchen designs create two parallel workspaces for multitasking, ideal for narrow rectangular kitchen layouts.',
+    benefits: ['Dual Workspace', 'High Efficiency', 'Perfect for Narrow Spaces', 'Professional Grade'],
+    icon: 'AlignJustify',
+    category: 'kitchen',
+  },
+  {
+    id: 'island-kitchen',
+    title: 'Island Kitchens',
+    description: 'Add a stunning centerpiece to your kitchen with a custom island — the ultimate in luxury, providing additional workspace, storage, and dining area.',
+    benefits: ['Extra Prep Space', 'Social Cooking Area', 'Built-in Storage', 'Luxury Aesthetic'],
+    icon: 'Layers',
+    category: 'kitchen',
+  },
+  {
+    id: 'straight-kitchen',
+    title: 'Straight Kitchens',
+    description: 'Clean, linear, and space-efficient. Our straight kitchen designs are perfect for compact spaces and open-plan living areas.',
+    benefits: ['Space Efficient', 'Easy Workflow', 'Budget Friendly', 'Modern Aesthetic'],
+    icon: 'Minus',
+    category: 'kitchen',
+  },
+  {
+    id: 'custom-kitchen',
+    title: 'Custom Modular Kitchens',
+    description: 'Your dream kitchen, built from scratch. We design and manufacture completely bespoke modular kitchens to match your unique vision and space requirements.',
+    benefits: ['Fully Bespoke', 'Any Shape or Size', 'Premium Finishes', 'Unique to You'],
+    icon: 'Sparkles',
+    category: 'kitchen',
+  },
+  {
+    id: 'kitchen-renovation',
+    title: 'Kitchen Renovation',
+    description: 'Breathe new life into your existing kitchen with our professional renovation services — from cabinet refacing to complete kitchen transformations.',
+    benefits: ['Cost-Effective', 'Minimal Disruption', 'Fast Turnaround', 'Updated Look'],
+    icon: 'RefreshCw',
+    category: 'interior',
+  },
+  {
+    id: 'wardrobe-design',
+    title: 'Wardrobe Design',
+    description: 'Beautifully designed, efficiently organized wardrobes that maximize storage while elevating your bedroom\'s aesthetic.',
+    benefits: ['Smart Organization', 'Custom Compartments', 'Soft-Close Fittings', 'Multiple Finishes'],
+    icon: 'Door',
+    category: 'interior',
+  },
+  {
+    id: 'cabinet-manufacturing',
+    title: 'Cabinet Manufacturing',
+    description: 'High-quality custom cabinets for every room — from kitchen cabinets to TV units, bathroom vanities, and office storage.',
+    benefits: ['Durable Construction', 'Variety of Finishes', 'Custom Dimensions', 'Multiple Room Types'],
+    icon: 'Package',
+    category: 'interior',
+  },
+  {
+    id: 'storage-solutions',
+    title: 'Storage Solutions',
+    description: 'Innovative and smart storage solutions that declutter your home while maintaining a premium aesthetic.',
+    benefits: ['Optimized Space', 'Hidden Storage', 'Modular Systems', 'Easy Access Design'],
+    icon: 'Archive',
+    category: 'interior',
+  },
+  {
+    id: 'kitchen-accessories',
+    title: 'Kitchen Accessories Installation',
+    description: 'Complete kitchen accessory installation — from pull-out baskets and soft-close hinges to dish racks, cutlery trays, and more.',
+    benefits: ['Premium Hardware', 'Expert Installation', 'Lifetime Durability', 'Wide Range'],
+    icon: 'Wrench',
+    category: 'interior',
+  },
+  {
+    id: 'interior-consultation',
+    title: 'Interior Consultation',
+    description: 'Expert interior design consultation to help you visualize and plan your dream space with professional guidance and 3D rendering.',
+    benefits: ['Expert Guidance', '3D Visualization', 'Material Samples', 'Budget Planning'],
+    icon: 'MessageSquare',
+    category: 'interior',
+  },
+];

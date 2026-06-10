@@ -1,0 +1,133 @@
+export interface Testimonial {
+  id: string;
+  name: string;
+  location: string;
+  rating: number;
+  review: string;
+  service: string;
+  initials: string;
+  color: string;
+}
+
+export const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    name: 'Rajesh Sharma',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'Shristi Enterprises transformed our kitchen completely! The quality of work is exceptional — every detail was carefully crafted. The team was professional, punctual, and delivered beyond our expectations. Our modular kitchen is now the showpiece of our home!',
+    service: 'Modular Kitchen Design',
+    initials: 'RS',
+    color: '#008000',
+  },
+  {
+    id: '2',
+    name: 'Priya Mehta',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'Absolutely love our new modular kitchen! The L-shaped design perfectly utilizes our space, and the finish quality is outstanding. Shristi Enterprises made the entire process seamless from design to installation. Highly recommended!',
+    service: 'L-Shaped Kitchen',
+    initials: 'PM',
+    color: '#14B8A6',
+  },
+  {
+    id: '3',
+    name: 'Vikram Singh Rathore',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'We got an island kitchen installed and it has changed our home entirely. The craftsmanship is top-notch, the materials are premium, and the price was very reasonable. The team was courteous and completed the work on time.',
+    service: 'Island Kitchen',
+    initials: 'VS',
+    color: '#F59E0B',
+  },
+  {
+    id: '4',
+    name: 'Sunita Agarwal',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'I had been searching for a reliable modular kitchen manufacturer in Udaipur for months. A friend recommended Shristi Enterprises and I could not be happier with my decision. The design consultation was thorough and the final result exceeded all expectations.',
+    service: 'U-Shaped Kitchen',
+    initials: 'SA',
+    color: '#7c3aed',
+  },
+  {
+    id: '5',
+    name: 'Mohan Lal Verma',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'Professional team, premium quality, and great value for money. Our parallel kitchen has been completely transformed. The storage solutions they implemented are brilliant — we now have space for everything and the kitchen looks like it belongs in a luxury home.',
+    service: 'Parallel Kitchen',
+    initials: 'MV',
+    color: '#dc2626',
+  },
+  {
+    id: '6',
+    name: 'Anita Joshi',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'The wardrobe design service from Shristi Enterprises is simply fantastic. Custom compartments, soft-close fittings, and a beautiful finish that matches our bedroom perfectly. The team was responsive and completed everything on schedule.',
+    service: 'Wardrobe Design',
+    initials: 'AJ',
+    color: '#db2777',
+  },
+  {
+    id: '7',
+    name: 'Deepak Chauhan',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'We renovated our old kitchen with Shristi Enterprises and the transformation is remarkable. It looks like an entirely new kitchen now! The renovation was done quickly and cleanly with minimal disruption to our daily routine.',
+    service: 'Kitchen Renovation',
+    initials: 'DC',
+    color: '#0891b2',
+  },
+  {
+    id: '8',
+    name: 'Kavita Bhandari',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'Truly outstanding service! The straight kitchen design for our apartment is both functional and strikingly beautiful. Shristi Enterprises understood our requirements perfectly and delivered a product that we are proud to show off to all our guests.',
+    service: 'Straight Kitchen',
+    initials: 'KB',
+    color: '#059669',
+  },
+  {
+    id: '9',
+    name: 'Ramesh Kumar Gupta',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'We hired Shristi Enterprises for custom cabinet manufacturing for our entire home office and living room. Exceptional quality and attention to detail. The project was completed on time, within budget, and the results are stunning.',
+    service: 'Cabinet Manufacturing',
+    initials: 'RG',
+    color: '#d97706',
+  },
+  {
+    id: '10',
+    name: 'Meena Rajpurohit',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'I cannot recommend Shristi Enterprises enough. From the initial consultation to the final installation, every step was handled professionally. Our new modular kitchen is a joy to cook in — organized, beautiful, and built to last.',
+    service: 'Modular Kitchen Manufacturing',
+    initials: 'MR',
+    color: '#7c3aed',
+  },
+  {
+    id: '11',
+    name: 'Suresh Patel',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'Shristi Enterprises has the best kitchen accessories in Udaipur. All the pull-out baskets, soft-close drawers, and cabinet fittings they installed have made our kitchen incredibly functional. Great value and excellent workmanship.',
+    service: 'Kitchen Accessories Installation',
+    initials: 'SP',
+    color: '#16a34a',
+  },
+  {
+    id: '12',
+    name: 'Nalini Trivedi',
+    location: 'Udaipur, Rajasthan',
+    rating: 5,
+    review: 'The interior consultation service was incredibly helpful. The 3D visualization helped us make confident design decisions. The team listened carefully to all our requirements and delivered exactly what we envisioned. Five stars without hesitation!',
+    service: 'Interior Consultation',
+    initials: 'NT',
+    color: '#ea580c',
+  },
+];

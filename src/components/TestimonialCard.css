@@ -1,0 +1,102 @@
+/* ─── Testimonial Card ───────────────────────────────────────── */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(0, 128, 0, 0.25);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Quote mark */
+.testimonial-card__quote {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(0, 128, 0, 0.08);
+  font-family: Georgia, serif;
+  font-weight: 900;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Stars */
+.testimonial-card__stars {
+  display: flex;
+  gap: 3px;
+}
+
+/* Review */
+.testimonial-card__review {
+  color: var(--text-body);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  flex: 1;
+  font-style: italic;
+}
+
+/* Service Tag */
+.testimonial-card__service {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(0, 128, 0, 0.08);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 128, 0, 0.15);
+}
+
+/* Author */
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.testimonial-card__avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonial-card__name {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.testimonial-card__location {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
