@@ -130,4 +130,6 @@
 @media (max-width: 640px) {
   .services-full-grid { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
+  .filter-btn { padding: 8px 18px; font-size: 0.8rem; }
+  .services-filter { gap: var(--space-sm); margin-bottom: var(--space-xl); }
 }

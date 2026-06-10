@@ -91,6 +91,14 @@
   font-size: 0.9rem;
 }
 
+.about-intro__image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+}
+
 /* ─── Timeline ───────────────────────────────────────────────── */
 .timeline {
   position: relative;
@@ -320,19 +328,46 @@
 @media (max-width: 1024px) {
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .timeline::before { left: 24px; }
-  .timeline-item { grid-template-columns: 32px 1fr; }
+  .timeline-item { grid-template-columns: 32px 1fr; gap: var(--space-md); }
   .timeline-item--left .timeline-card,
   .timeline-item--right .timeline-card { grid-column: 2; text-align: left; }
   .timeline-item--left .timeline-dot,
   .timeline-item--right .timeline-dot { grid-column: 1; }
   .timeline-item--right .timeline-card { grid-column: 2; }
+  .about-intro__image { height: 380px; }
 }
 
 @media (max-width: 768px) {
-  .about-intro-grid { grid-template-columns: 1fr; }
+  .about-intro-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .about-intro__image { height: 320px; }
   .expertise-grid { grid-template-columns: 1fr; }
   .trust-grid { grid-template-columns: 1fr; }
-  .about-stats-row { gap: var(--space-xl); }
-  .cta-section__actions { flex-direction: column; align-items: center; }
+  .about-stats-row { display: flex; flex-wrap: wrap; gap: var(--space-xl); }
+  .cta-section__actions { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
+  .cta-section__actions .btn { width: 100%; }
   .page-hero { padding: 140px 0 60px; }
+}
+
+@media (max-width: 480px) {
+  .about-intro__image { height: 240px; }
+  .about-image-badge {
+    left: 10px;
+    bottom: -10px;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+  }
+  .about-stats-row {
+    gap: var(--space-md);
+    justify-content: space-between;
+  }
+  .about-stat {
+    flex: 1 1 120px;
+    text-align: center;
+  }
+  .about-stat strong {
+    font-size: 1.75rem;
+  }
+  .timeline-card {
+    padding: var(--space-md) var(--space-lg);
+  }
 }

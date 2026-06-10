@@ -135,11 +135,20 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-md);
-  color: var(--text-dark);
-  transition: background var(--transition-fast);
+  color: rgba(255, 255, 255, 0.9);
+  transition: all var(--transition-fast);
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.navbar--scrolled .navbar__hamburger {
+  color: var(--text-dark);
+}
+
+.navbar__mobile .navbar__hamburger {
+  color: var(--text-dark);
+  display: flex;
 }
 
 .navbar__hamburger:hover {

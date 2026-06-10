@@ -110,7 +110,7 @@ const About: React.FC = () => {
               <img
                 src={aboutImg}
                 alt="Shristi Enterprises kitchen showroom in Udaipur"
-                style={{ width: '100%', height: '480px', objectFit: 'cover', borderRadius: 'var(--radius-2xl)', boxShadow: 'var(--shadow-xl)' }}
+                className="about-intro__image"
                 loading="lazy"
               />
               <div className="about-image-badge">

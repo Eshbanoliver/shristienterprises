@@ -612,12 +612,15 @@
 }
 
 @media (max-width: 768px) {
-  .hero__title { font-size: 2.2rem; }
-  .hero__actions { flex-direction: column; align-items: flex-start; }
+  .hero { min-height: auto; }
+  .hero__content { padding-top: var(--space-4xl); padding-bottom: var(--space-3xl); }
+  .hero__title { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+  .hero__subtitle { margin-bottom: var(--space-xl); }
+  .hero__actions { flex-direction: column; align-items: stretch; width: 100%; }
   .hero__actions .btn { width: 100%; justify-content: center; }
 
-  .about-preview__grid { grid-template-columns: 1fr; }
-  .about-preview__image { height: 300px; }
+  .about-preview__grid { grid-template-columns: 1fr; gap: var(--space-2xl); }
+  .about-preview__image { height: 320px; }
   .about-preview__badge-card { right: 10px; bottom: -15px; }
 
   .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
@@ -626,12 +629,28 @@
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-preview-grid { grid-template-columns: 1fr; }
-  .cta-banner__actions { flex-direction: column; align-items: center; }
+  .cta-banner__actions { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
+  .cta-banner__actions .btn { width: 100%; }
 }
 
 @media (max-width: 480px) {
+  .hero__content { padding-top: var(--space-3xl); padding-bottom: var(--space-2xl); }
+  .about-preview__image { height: 240px; }
+  .about-preview__badge-card {
+    padding: var(--space-sm) var(--space-md);
+    right: 5px;
+    bottom: -10px;
+    border-radius: var(--radius-lg);
+  }
+  .about-preview__badge-card svg {
+    width: 28px;
+    height: 28px;
+  }
+  .about-preview__badge-card strong {
+    font-size: 0.95rem;
+  }
   .values-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .metrics-grid { grid-template-columns: 1fr; }
-  .hero__trust { flex-direction: column; }
+  .hero__trust { flex-direction: column; gap: var(--space-xs); }
 }

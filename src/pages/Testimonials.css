@@ -200,7 +200,8 @@
   .satisfaction-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   .stories-grid { grid-template-columns: 1fr; }
-  .rating-banner__inner { flex-direction: column; text-align: center; }
+  .rating-banner__inner { flex-direction: column; text-align: center; gap: var(--space-xl); }
+  .rating-banner__breakdown { width: 100%; max-width: 480px; margin: 0 auto; }
 }
 
 @media (max-width: 640px) {

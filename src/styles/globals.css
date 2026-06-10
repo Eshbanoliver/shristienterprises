@@ -391,12 +391,17 @@ ul, ol {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .container { padding: 0 var(--space-lg); }
+  .container-wide { padding: 0 var(--space-lg); }
   .section { padding: var(--space-4xl) 0; }
+  .section-sm { padding: var(--space-2xl) 0; }
 }
 
 @media (max-width: 768px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .section { padding: var(--space-3xl) 0; }
+  .section-sm { padding: var(--space-xl) 0; }
   .container { padding: 0 var(--space-md); }
+  .container-wide { padding: 0 var(--space-md); }
   .btn-lg { padding: 14px 28px; }
 }
+
