@@ -613,7 +613,7 @@
 
 @media (max-width: 768px) {
   .hero { min-height: auto; }
-  .hero__content { padding-top: var(--space-4xl); padding-bottom: var(--space-3xl); }
+  .hero__content { padding-top: 100px; padding-bottom: var(--space-3xl); }
   .hero__title { font-size: clamp(1.8rem, 6vw, 2.4rem); }
   .hero__subtitle { margin-bottom: var(--space-xl); }
   .hero__actions { flex-direction: column; align-items: stretch; width: 100%; }
@@ -629,12 +629,13 @@
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-preview-grid { grid-template-columns: 1fr; }
+  .cta-banner { padding: var(--space-3xl) 0; }
   .cta-banner__actions { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
   .cta-banner__actions .btn { width: 100%; }
 }
 
 @media (max-width: 480px) {
-  .hero__content { padding-top: var(--space-3xl); padding-bottom: var(--space-2xl); }
+  .hero__content { padding-top: 96px; padding-bottom: var(--space-2xl); }
   .about-preview__image { height: 240px; }
   .about-preview__badge-card {
     padding: var(--space-sm) var(--space-md);
@@ -649,6 +650,9 @@
   .about-preview__badge-card strong {
     font-size: 0.95rem;
   }
+  .counter-card { padding: var(--space-md) var(--space-lg); }
+  .mv-card { padding: var(--space-lg); }
+  .why-card { padding: var(--space-lg); }
   .values-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .metrics-grid { grid-template-columns: 1fr; }

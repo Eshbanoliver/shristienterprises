@@ -349,6 +349,7 @@
 }
 
 @media (max-width: 480px) {
+  .page-hero { padding: 120px 0 50px; }
   .about-intro__image { height: 240px; }
   .about-image-badge {
     left: 10px;
@@ -369,5 +370,11 @@
   }
   .timeline-card {
     padding: var(--space-md) var(--space-lg);
+  }
+  .expertise-card {
+    padding: var(--space-lg);
+  }
+  .trust-card {
+    padding: var(--space-lg);
   }
 }

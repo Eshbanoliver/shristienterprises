@@ -405,3 +405,8 @@ ul, ol {
   .btn-lg { padding: 14px 28px; }
 }
 
+@media (max-width: 480px) {
+  .section { padding: var(--space-2xl) 0; }
+  .section-sm { padding: var(--space-lg) 0; }
+}
+

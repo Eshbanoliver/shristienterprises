@@ -139,3 +139,8 @@
 .service-card__cta:hover {
   gap: 10px;
 }
+
+@media (max-width: 480px) {
+  .service-card { padding: var(--space-lg); gap: var(--space-sm); }
+  .service-card__benefits { padding-top: var(--space-sm); }
+}
