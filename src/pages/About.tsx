@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircle2, Award, Users, Briefcase, Heart, ArrowRight, MessageCircle, Phone } from 'lucide-react';
+import { Heart, ArrowRight, MessageCircle, Phone,
+  Factory, Palette, ShieldCheck, Gem, Clock3, BadgeCheck, Trophy, Layers, Users } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import aboutImg from '../assets/about-kitchen.png';
 import './About.css';
@@ -18,19 +19,19 @@ const timeline = [
 ];
 
 const expertise = [
-  { icon: <Briefcase size={28} />, title: 'Modular Kitchen Manufacturing', desc: 'State-of-the-art manufacturing facility producing precision-crafted modular kitchen units using premium grade materials and advanced CNC machinery.' },
-  { icon: <Award size={28} />, title: 'Kitchen Design', desc: 'Expert design team creating beautiful, functional kitchen layouts in 3D visualization. From contemporary to classic, we design kitchens that suit your style.' },
-  { icon: <CheckCircle2 size={28} />, title: 'Storage Optimization', desc: 'Smart space planning and innovative storage solutions that maximize every inch of your kitchen, making it more organized and efficient.' },
+  { icon: <Factory size={28} />, title: 'Modular Kitchen Manufacturing', desc: 'State-of-the-art manufacturing facility producing precision-crafted modular kitchen units using premium grade materials and advanced CNC machinery.' },
+  { icon: <Palette size={28} />, title: 'Kitchen Design', desc: 'Expert design team creating beautiful, functional kitchen layouts in 3D visualization. From contemporary to classic, we design kitchens that suit your style.' },
+  { icon: <Layers size={28} />, title: 'Storage Optimization', desc: 'Smart space planning and innovative storage solutions that maximize every inch of your kitchen, making it more organized and efficient.' },
   { icon: <Users size={28} />, title: 'Interior Solutions', desc: 'Complete interior services including wardrobe design, custom cabinets, TV units, and more — making us your one-stop interior partner.' },
 ];
 
 const trustFeatures = [
-  { icon: '🏆', title: '10+ Years Experience', desc: 'Over a decade of transforming kitchens and spaces in Udaipur with consistent excellence.' },
-  { icon: '✅', title: '500+ Projects Delivered', desc: 'Half a thousand successful kitchen installations — each one a testament to our quality.' },
-  { icon: '🛡️', title: '5-Year Structural Warranty', desc: 'Comprehensive warranty coverage giving you complete peace of mind after installation.' },
-  { icon: '💎', title: 'Premium Materials Only', desc: 'We never compromise on material quality — only the best marine ply and hardware brands.' },
-  { icon: '⏰', title: 'On-Time Delivery', desc: 'We respect your time. Projects delivered on the committed date, every single time.' },
-  { icon: '🎨', title: 'Endless Customization', desc: '300+ finish options, custom dimensions, unique layouts — all tailored to your vision.' },
+  { icon: <Trophy size={28} />, title: '10+ Years Experience', desc: 'Over a decade of transforming kitchens and spaces in Udaipur with consistent excellence.' },
+  { icon: <BadgeCheck size={28} />, title: '500+ Projects Delivered', desc: 'Half a thousand successful kitchen installations — each one a testament to our quality.' },
+  { icon: <ShieldCheck size={28} />, title: '5-Year Structural Warranty', desc: 'Comprehensive warranty coverage giving you complete peace of mind after installation.' },
+  { icon: <Gem size={28} />, title: 'Premium Materials Only', desc: 'We never compromise on material quality — only the best marine ply and hardware brands.' },
+  { icon: <Clock3 size={28} />, title: 'On-Time Delivery', desc: 'We respect your time. Projects delivered on the committed date, every single time.' },
+  { icon: <Palette size={28} />, title: 'Endless Customization', desc: '300+ finish options, custom dimensions, unique layouts — all tailored to your vision.' },
 ];
 
 const About: React.FC = () => {
@@ -200,7 +201,7 @@ const About: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
               >
-                <div className="trust-card__emoji" aria-hidden="true">{f.icon}</div>
+                <div className="trust-card__icon" aria-hidden="true">{f.icon}</div>
                 <h3 className="trust-card__title">{f.title}</h3>
                 <p className="trust-card__desc">{f.desc}</p>
               </motion.div>

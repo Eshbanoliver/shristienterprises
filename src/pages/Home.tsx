@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import {
   Phone, MessageCircle, ArrowRight, CheckCircle2, Award, Users, Briefcase,
   Star, Target, Eye, Zap, Shield, Heart, Clock, Wrench, Headphones,
-  DollarSign, ChevronRight, TrendingUp
+  DollarSign, ChevronRight, TrendingUp, Utensils
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -402,7 +402,9 @@ const Home: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="cta-banner__icon" aria-hidden="true">🍴</div>
+            <div className="cta-banner__icon" aria-hidden="true">
+              <Utensils size={40} />
+            </div>
             <h2 id="cta-heading" className="cta-banner__title">
               Ready To Build Your Dream Modular Kitchen?
             </h2>

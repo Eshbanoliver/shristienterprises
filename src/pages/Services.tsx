@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Phone, MessageCircle, MessageSquare, Palette, Factory, CheckCircle2 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ServiceCard from '../components/ServiceCard';
 import { services } from '../data/services';
@@ -102,10 +103,10 @@ const Services: React.FC = () => {
 
           <div className="process-grid">
             {[
-              { step: '01', title: 'Free Consultation', desc: 'We visit your home, understand your needs, take measurements, and discuss your vision and budget.', icon: '💬' },
-              { step: '02', title: 'Design & 3D Visualization', desc: 'Our designers create a personalized layout with 3D visuals so you can see exactly how your kitchen will look.', icon: '🎨' },
-              { step: '03', title: 'Manufacturing', desc: 'Precision manufacturing at our facility using premium materials and advanced CNC machinery.', icon: '🏭' },
-              { step: '04', title: 'Installation & Handover', desc: 'Expert installation team sets up your kitchen and hands it over — clean, ready to use, and perfect.', icon: '✅' },
+              { step: '01', title: 'Free Consultation', desc: 'We visit your home, understand your needs, take measurements, and discuss your vision and budget.', icon: <MessageSquare size={28} /> },
+              { step: '02', title: 'Design & 3D Visualization', desc: 'Our designers create a personalized layout with 3D visuals so you can see exactly how your kitchen will look.', icon: <Palette size={28} /> },
+              { step: '03', title: 'Manufacturing', desc: 'Precision manufacturing at our facility using premium materials and advanced CNC machinery.', icon: <Factory size={28} /> },
+              { step: '04', title: 'Installation & Handover', desc: 'Expert installation team sets up your kitchen and hands it over — clean, ready to use, and perfect.', icon: <CheckCircle2 size={28} /> },
             ].map((step, i) => (
               <motion.div
                 key={step.step}
@@ -137,7 +138,7 @@ const Services: React.FC = () => {
             </p>
             <div className="cta-section__actions">
               <a href="tel:+919829346870" className="btn btn-white btn-lg">
-                📞 Call Now
+                <Phone size={18} /> Call Now
               </a>
               <a
                 href="https://wa.me/919829346870?text=Hello%20Shristi%20Enterprises%2C%20I%27m%20interested%20in%20your%20services."
@@ -145,7 +146,7 @@ const Services: React.FC = () => {
                 rel="noopener noreferrer"
                 className="btn btn-glass btn-lg"
               >
-                💬 WhatsApp Us
+                <MessageCircle size={18} /> WhatsApp Us
               </a>
             </div>
           </motion.div>

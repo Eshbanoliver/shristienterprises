@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChefHat } from 'lucide-react';
+import { Menu, X, ChefHat, Phone, MessageCircle } from 'lucide-react';
 import './Navbar.css';
 
 const navLinks = [
@@ -147,7 +147,7 @@ const Navbar: React.FC = () => {
 
               <div className="navbar__mobile-cta">
                 <a href="tel:+919829346870" className="btn btn-primary">
-                  📞 Call Now
+                  <Phone size={16} /> Call Now
                 </a>
                 <a
                   href="https://wa.me/919829346870?text=Hello%20Shristi%20Enterprises%2C%20I%27m%20interested%20in%20your%20modular%20kitchen%20services."
@@ -155,7 +155,7 @@ const Navbar: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  💬 WhatsApp
+                  <MessageCircle size={16} /> WhatsApp
                 </a>
               </div>
             </motion.nav>

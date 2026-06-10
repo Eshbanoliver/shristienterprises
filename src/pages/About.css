@@ -237,9 +237,22 @@
   text-align: center;
 }
 
-.trust-card__emoji {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-md);
+.trust-card__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  background: rgba(0, 128, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin: 0 auto var(--space-md);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.trust-card:hover .trust-card__icon {
+  background: rgba(0, 128, 0, 0.18);
+  transform: scale(1.08);
 }
 
 .trust-card__title {

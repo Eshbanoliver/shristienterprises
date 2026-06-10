@@ -85,7 +85,7 @@ export const services: Service[] = [
     title: 'Wardrobe Design',
     description: 'Beautifully designed, efficiently organized wardrobes that maximize storage while elevating your bedroom\'s aesthetic.',
     benefits: ['Smart Organization', 'Custom Compartments', 'Soft-Close Fittings', 'Multiple Finishes'],
-    icon: 'Door',
+    icon: 'DoorOpen',
     category: 'interior',
   },
   {

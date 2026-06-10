@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, ThumbsUp, Users, Heart, Award } from 'lucide-react';
+import { Star, ThumbsUp, Users, Heart, Award, Home, Sparkles, Target, Phone, MessageCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import TestimonialCard from '../components/TestimonialCard';
 import AnimatedCounter from '../components/AnimatedCounter';
@@ -14,7 +14,7 @@ const successStories = [
     headline: 'Complete Home Kitchen Transformation',
     story: 'The Sharma family wanted a complete kitchen overhaul in their 3BHK apartment. We designed and installed a stunning U-shaped modular kitchen with an island breakfast counter, premium acrylic shutters, and smart storage solutions.',
     result: 'Delivered in 18 days. The family now enjoys a world-class kitchen that has become the centerpiece of their home.',
-    emoji: '🏠',
+    icon: <Home size={28} />,
     color: '#008000',
   },
   {
@@ -23,7 +23,7 @@ const successStories = [
     headline: 'Luxury Island Kitchen Design',
     story: 'Mrs. Priya Mehta dreamed of an island kitchen for her newly constructed villa. We created an L-shaped layout with a stunning free-standing island, matching marble countertops, and premium Hettich hardware throughout.',
     result: 'A breathtaking kitchen that has been featured in conversations among all their guests. Completed on time, within budget.',
-    emoji: '✨',
+    icon: <Sparkles size={28} />,
     color: '#14B8A6',
   },
   {
@@ -32,7 +32,7 @@ const successStories = [
     headline: 'Compact Kitchen, Maximum Efficiency',
     story: 'Working with a compact kitchen space, we designed a highly efficient parallel kitchen layout with floor-to-ceiling storage, hidden appliance sections, and a pull-out pantry unit that made the most of every inch.',
     result: 'The client was amazed at how much storage we managed in a small space. A functional masterpiece in a challenging footprint.',
-    emoji: '🎯',
+    icon: <Target size={28} />,
     color: '#F59E0B',
   },
 ];
@@ -164,7 +164,7 @@ const Testimonials: React.FC = () => {
                 transition={{ duration: 0.55, delay: i * 0.12 }}
                 aria-label={`Success story: ${story.client}`}
               >
-                <div className="story-card__emoji" aria-hidden="true" style={{ color: story.color }}>{story.emoji}</div>
+                <div className="story-card__icon" aria-hidden="true" style={{ color: story.color, background: `${story.color}15`, border: `1px solid ${story.color}25` }}>{story.icon}</div>
                 <div className="story-card__badge" style={{ color: story.color, background: `${story.color}15`, border: `1px solid ${story.color}33` }}>
                   {story.client} · {story.location}
                 </div>
@@ -190,14 +190,16 @@ const Testimonials: React.FC = () => {
               Your dream kitchen is just a call away. Let Shristi Enterprises transform your kitchen into something extraordinary.
             </p>
             <div className="cta-section__actions">
-              <a href="tel:+919829346870" className="btn btn-white btn-lg">📞 Call Now</a>
+              <a href="tel:+919829346870" className="btn btn-white btn-lg">
+                <Phone size={18} /> Call Now
+              </a>
               <a
                 href="https://wa.me/919829346870?text=Hi%20Shristi%20Enterprises%2C%20I%20want%20to%20discuss%20my%20kitchen%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-glass btn-lg"
               >
-                💬 WhatsApp
+                <MessageCircle size={18} /> WhatsApp
               </a>
             </div>
           </div>
