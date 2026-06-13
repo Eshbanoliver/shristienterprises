@@ -18,7 +18,7 @@
 
 .testimonial-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-green-lg);
   border-color: rgba(0, 128, 0, 0.25);
   background: rgba(255, 255, 255, 0.9);
 }

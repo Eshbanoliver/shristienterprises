@@ -368,7 +368,7 @@
 
 .mv-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-green-lg);
 }
 
 .mv-card--vision {
@@ -449,7 +449,7 @@
 }
 
 .value-card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-green-lg);
   border-color: rgba(0, 128, 0, 0.2);
 }
 
