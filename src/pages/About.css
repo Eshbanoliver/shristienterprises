@@ -136,8 +136,6 @@
 .timeline-item--right .timeline-dot { grid-column: 2; }
 
 /* Actual layout: left card, dot in center, empty right OR empty left, dot, right card */
-.timeline-item--left { }
-.timeline-item--right { }
 
 .timeline-card {
   background: white;
