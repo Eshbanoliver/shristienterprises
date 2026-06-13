@@ -5,6 +5,7 @@ export interface Service {
   benefits: string[];
   icon: string;
   category: 'kitchen' | 'interior';
+  image: string;
 }
 
 export const services: Service[] = [
@@ -15,6 +16,7 @@ export const services: Service[] = [
     benefits: ['3D Design Visualization', 'Space Optimization', 'Personalized Layouts', 'Material Consultation'],
     icon: 'LayoutDashboard',
     category: 'kitchen',
+    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80',
   },
   {
     id: 'modular-kitchen-manufacturing',
@@ -23,6 +25,7 @@ export const services: Service[] = [
     benefits: ['Premium Quality Materials', 'In-House Manufacturing', 'Quality Assurance', 'Custom Sizing'],
     icon: 'Factory',
     category: 'kitchen',
+    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80',
   },
   {
     id: 'l-shaped-kitchen',
@@ -31,6 +34,7 @@ export const services: Service[] = [
     benefits: ['Efficient Work Triangle', 'Maximum Storage', 'Great for Medium Spaces', 'Open Layout Friendly'],
     icon: 'CornerUpRight',
     category: 'kitchen',
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&q=80',
   },
   {
     id: 'u-shaped-kitchen',
@@ -39,6 +43,7 @@ export const services: Service[] = [
     benefits: ['Maximum Counter Space', 'Three-Wall Storage', 'Professional Feel', 'Ideal for Large Kitchens'],
     icon: 'Square',
     category: 'kitchen',
+    image: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&q=80',
   },
   {
     id: 'parallel-kitchen',
@@ -47,6 +52,7 @@ export const services: Service[] = [
     benefits: ['Dual Workspace', 'High Efficiency', 'Perfect for Narrow Spaces', 'Professional Grade'],
     icon: 'AlignJustify',
     category: 'kitchen',
+    image: 'https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80',
   },
   {
     id: 'island-kitchen',
@@ -55,6 +61,7 @@ export const services: Service[] = [
     benefits: ['Extra Prep Space', 'Social Cooking Area', 'Built-in Storage', 'Luxury Aesthetic'],
     icon: 'Layers',
     category: 'kitchen',
+    image: 'https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?auto=format&fit=crop&q=80',
   },
   {
     id: 'straight-kitchen',
@@ -63,6 +70,7 @@ export const services: Service[] = [
     benefits: ['Space Efficient', 'Easy Workflow', 'Budget Friendly', 'Modern Aesthetic'],
     icon: 'Minus',
     category: 'kitchen',
+    image: 'https://images.unsplash.com/photo-1556912998-c57cc6b63ce7?auto=format&fit=crop&q=80',
   },
   {
     id: 'custom-kitchen',
@@ -71,6 +79,7 @@ export const services: Service[] = [
     benefits: ['Fully Bespoke', 'Any Shape or Size', 'Premium Finishes', 'Unique to You'],
     icon: 'Sparkles',
     category: 'kitchen',
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&q=80',
   },
   {
     id: 'kitchen-renovation',
@@ -79,6 +88,7 @@ export const services: Service[] = [
     benefits: ['Cost-Effective', 'Minimal Disruption', 'Fast Turnaround', 'Updated Look'],
     icon: 'RefreshCw',
     category: 'interior',
+    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80',
   },
   {
     id: 'wardrobe-design',
@@ -87,6 +97,7 @@ export const services: Service[] = [
     benefits: ['Smart Organization', 'Custom Compartments', 'Soft-Close Fittings', 'Multiple Finishes'],
     icon: 'DoorOpen',
     category: 'interior',
+    image: 'https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80',
   },
   {
     id: 'cabinet-manufacturing',
@@ -95,6 +106,7 @@ export const services: Service[] = [
     benefits: ['Durable Construction', 'Variety of Finishes', 'Custom Dimensions', 'Multiple Room Types'],
     icon: 'Package',
     category: 'interior',
+    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80',
   },
   {
     id: 'storage-solutions',
@@ -103,6 +115,7 @@ export const services: Service[] = [
     benefits: ['Optimized Space', 'Hidden Storage', 'Modular Systems', 'Easy Access Design'],
     icon: 'Archive',
     category: 'interior',
+    image: 'https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?auto=format&fit=crop&q=80',
   },
   {
     id: 'kitchen-accessories',
@@ -111,6 +124,7 @@ export const services: Service[] = [
     benefits: ['Premium Hardware', 'Expert Installation', 'Lifetime Durability', 'Wide Range'],
     icon: 'Wrench',
     category: 'interior',
+    image: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&q=80',
   },
   {
     id: 'interior-consultation',
@@ -119,5 +133,6 @@ export const services: Service[] = [
     benefits: ['Expert Guidance', '3D Visualization', 'Material Samples', 'Budget Planning'],
     icon: 'MessageSquare',
     category: 'interior',
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&q=80',
   },
 ];

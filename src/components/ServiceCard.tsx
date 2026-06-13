@@ -27,24 +27,30 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index = 0, featured 
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, delay: index * 0.08, ease: 'easeOut' }}
     >
-      <div className={`service-card__icon-wrap service-card__icon-wrap--${service.category}`}>
-        {IconComponent ? <IconComponent size={28} /> : <span>🍴</span>}
+      <div className="service-card__image-container">
+        <img src={service.image} alt={service.title} className="service-card__image" loading="lazy" />
+        <div className="service-card__image-overlay" />
+        <div className={`service-card__icon-wrap service-card__icon-wrap--${service.category}`}>
+          {IconComponent ? <IconComponent size={24} /> : <span>🍴</span>}
+        </div>
       </div>
 
-      <h3 className="service-card__title">{service.title}</h3>
-      <p className="service-card__desc">{service.description}</p>
+      <div className="service-card__content">
+        <h3 className="service-card__title">{service.title}</h3>
+        <p className="service-card__desc">{service.description}</p>
 
-      <ul className="service-card__benefits">
-        {service.benefits.map((b) => (
-          <li key={b} className="service-card__benefit">
-            <span className="service-card__check">✓</span> {b}
-          </li>
-        ))}
-      </ul>
+        <ul className="service-card__benefits">
+          {service.benefits.map((b) => (
+            <li key={b} className="service-card__benefit">
+              <span className="service-card__check">✓</span> {b}
+            </li>
+          ))}
+        </ul>
 
-      <Link to="/contact" className="service-card__cta">
-        Get a Quote <ArrowRight size={16} />
-      </Link>
+        <Link to="/contact" className="service-card__cta">
+          Get a Quote <ArrowRight size={16} />
+        </Link>
+      </div>
     </motion.div>
   );
 };
