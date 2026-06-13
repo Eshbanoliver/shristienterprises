@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Phone, MessageCircle, ArrowRight, CheckCircle2, Award, Users, Briefcase,
   Star, Target, Eye, Zap, Shield, Heart, Clock, Wrench, Headphones,
@@ -18,8 +18,15 @@ import heroImg from '../assets/hero-kitchen.png';
 import aboutImg from '../assets/about-kitchen.png';
 import './Home.css';
 
+const heroImages = [
+  heroImg,
+  aboutImg,
+  'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&q=80',
+];
+
 const WA_LINK =
   'https://wa.me/919829346870?text=Hello%20Shristi%20Enterprises%2C%20I%27m%20interested%20in%20your%20modular%20kitchen%20services.%20Please%20share%20more%20details.';
+
 
 const previewServices = services.slice(0, 6);
 const previewTestimonials = testimonials.slice(0, 3);
@@ -52,6 +59,15 @@ const whyChooseUs = [
 ];
 
 const Home: React.FC = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       <SEOHead
@@ -62,12 +78,19 @@ const Home: React.FC = () => {
 
       {/* ═══════════════ HERO SECTION ═══════════════ */}
       <section className="hero" aria-label="Hero section">
-        <div
-          className="hero__bg"
-          style={{ backgroundImage: `url(${heroImg})` }}
-          role="img"
-          aria-label="Premium modular kitchen interior"
-        />
+        <AnimatePresence>
+          <motion.div
+            key={currentImage}
+            className="hero__bg"
+            style={{ backgroundImage: `url(${heroImages[currentImage]})` }}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: 'easeInOut' }}
+            role="img"
+            aria-label="Premium modular kitchen interior"
+          />
+        </AnimatePresence>
         <div className="hero__overlay" />
 
         {/* Floating orbs */}
@@ -139,6 +162,18 @@ const Home: React.FC = () => {
               ))}
             </motion.div>
           </motion.div>
+        </div>
+
+        {/* Slider Controls */}
+        <div className="hero__dots">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              className={`hero__dot ${index === currentImage ? 'active' : ''}`}
+              onClick={() => setCurrentImage(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
 
         {/* Scroll indicator */}
