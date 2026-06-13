@@ -1,3 +1,10 @@
+import imgDesign from '../assets/ai_kitchens/modular_kitchen_design_1781325837835.png';
+import imgMfg from '../assets/ai_kitchens/modular_kitchen_manufacturing_1781325848566.png';
+import imgLShaped from '../assets/ai_kitchens/l_shaped_kitchen_1781325860992.png';
+import imgUShaped from '../assets/ai_kitchens/u_shaped_kitchen_1781325878596.png';
+import imgParallel from '../assets/ai_kitchens/parallel_kitchen_1781325892473.png';
+import imgIsland from '../assets/ai_kitchens/island_kitchen_1781325903278.png';
+
 export interface Service {
   id: string;
   title: string;
@@ -16,7 +23,7 @@ export const services: Service[] = [
     benefits: ['3D Design Visualization', 'Space Optimization', 'Personalized Layouts', 'Material Consultation'],
     icon: 'LayoutDashboard',
     category: 'kitchen',
-    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80',
+    image: imgDesign,
   },
   {
     id: 'modular-kitchen-manufacturing',
@@ -25,7 +32,7 @@ export const services: Service[] = [
     benefits: ['Premium Quality Materials', 'In-House Manufacturing', 'Quality Assurance', 'Custom Sizing'],
     icon: 'Factory',
     category: 'kitchen',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80',
+    image: imgMfg,
   },
   {
     id: 'l-shaped-kitchen',
@@ -34,7 +41,7 @@ export const services: Service[] = [
     benefits: ['Efficient Work Triangle', 'Maximum Storage', 'Great for Medium Spaces', 'Open Layout Friendly'],
     icon: 'CornerUpRight',
     category: 'kitchen',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&q=80',
+    image: imgLShaped,
   },
   {
     id: 'u-shaped-kitchen',
@@ -43,7 +50,7 @@ export const services: Service[] = [
     benefits: ['Maximum Counter Space', 'Three-Wall Storage', 'Professional Feel', 'Ideal for Large Kitchens'],
     icon: 'Square',
     category: 'kitchen',
-    image: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&q=80',
+    image: imgUShaped,
   },
   {
     id: 'parallel-kitchen',
@@ -52,7 +59,7 @@ export const services: Service[] = [
     benefits: ['Dual Workspace', 'High Efficiency', 'Perfect for Narrow Spaces', 'Professional Grade'],
     icon: 'AlignJustify',
     category: 'kitchen',
-    image: 'https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80',
+    image: imgParallel,
   },
   {
     id: 'island-kitchen',
@@ -61,7 +68,7 @@ export const services: Service[] = [
     benefits: ['Extra Prep Space', 'Social Cooking Area', 'Built-in Storage', 'Luxury Aesthetic'],
     icon: 'Layers',
     category: 'kitchen',
-    image: 'https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?auto=format&fit=crop&q=80',
+    image: imgIsland,
   },
   {
     id: 'straight-kitchen',
