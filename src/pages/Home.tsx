@@ -376,7 +376,7 @@ const Home: React.FC = () => {
             {coreValues.map((v, i) => (
               <motion.div
                 key={v.title}
-                className="value-card"
+                className={`value-card value-card--${i}`}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
