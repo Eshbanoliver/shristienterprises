@@ -29,7 +29,8 @@ const WA_LINK =
 
 
 const previewServices = services.slice(0, 6);
-const previewTestimonials = testimonials.slice(0, 3);
+// Remove unused preview slice
+// const previewTestimonials = testimonials.slice(0, 3);
 
 const metrics = [
   { target: 500, suffix: '+', label: 'Projects Completed', icon: <Briefcase size={28} /> },
@@ -476,10 +477,14 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="testimonials-preview-grid">
-            {previewTestimonials.map((t, i) => (
-              <TestimonialCard key={t.id} testimonial={t} index={i} />
-            ))}
+          <div className="testimonials-marquee-container">
+            <div className="testimonials-marquee-track">
+              {[...testimonials, ...testimonials].map((t, i) => (
+                <div key={`${t.id}-${i}`} className="marquee-item">
+                  <TestimonialCard testimonial={t} index={i % testimonials.length} />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="text-center" style={{ marginTop: 'var(--space-2xl)' }}>
