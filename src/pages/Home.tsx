@@ -397,14 +397,14 @@ const Home: React.FC = () => {
         <div className="why-section__bg" aria-hidden="true" />
         <div className="container">
           <div className="text-center" style={{ marginBottom: 'var(--space-3xl)', position: 'relative', zIndex: 2 }}>
-            <div className="section-badge" style={{ background: 'rgba(255,255,255,0.15)', borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
+            <div className="section-badge">
               Why Shristi Enterprises
             </div>
-            <h2 id="why-heading" className="section-title" style={{ color: 'white' }}>
-              Why Choose <span style={{ color: 'var(--accent)' }}>Us?</span>
+            <h2 id="why-heading" className="section-title">
+              Why Choose <span>Us?</span>
             </h2>
-            <div className="divider divider-center" style={{ background: 'linear-gradient(135deg, var(--accent), #f97316)' }} />
-            <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.8)' }}>
+            <div className="divider divider-center" />
+            <p className="section-subtitle">
               Eight compelling reasons why Udaipur homeowners trust Shristi Enterprises for their dream kitchens.
             </p>
           </div>
@@ -413,7 +413,7 @@ const Home: React.FC = () => {
             {whyChooseUs.map((item, i) => (
               <motion.div
                 key={item.title}
-                className="why-card"
+                className={`why-card why-card--${i}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
