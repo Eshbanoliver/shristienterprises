@@ -16,12 +16,13 @@ import { testimonials } from '../data/testimonials';
 import { faqs } from '../data/faqs';
 import heroImg from '../assets/hero-kitchen.png';
 import aboutImg from '../assets/about-kitchen.png';
+import islandKitchenImg from '../assets/ai_kitchens/island_kitchen_1781325903278.png';
 import './Home.css';
 
 const heroImages = [
   heroImg,
   aboutImg,
-  'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&q=80',
+  islandKitchenImg,
 ];
 
 const WA_LINK =
