@@ -396,7 +396,7 @@ const Home: React.FC = () => {
       <section className="section why-section" aria-labelledby="why-heading">
         <div className="why-section__bg" aria-hidden="true" />
         <div className="container">
-          <div className="text-center" style={{ marginBottom: 'var(--space-3xl)' }}>
+          <div className="text-center" style={{ marginBottom: 'var(--space-3xl)', position: 'relative', zIndex: 2 }}>
             <div className="section-badge" style={{ background: 'rgba(255,255,255,0.15)', borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
               Why Shristi Enterprises
             </div>
@@ -416,12 +416,16 @@ const Home: React.FC = () => {
                 className="why-card"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.07 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: i * 0.1, type: "spring", stiffness: 100 }}
+                whileHover={{ y: -10, scale: 1.03 }}
               >
-                <div className="why-card__icon">{item.icon}</div>
-                <h3 className="why-card__title">{item.title}</h3>
-                <p className="why-card__desc">{item.desc}</p>
+                <div className="why-card__glow" />
+                <div className="why-card__inner">
+                  <div className="why-card__icon">{item.icon}</div>
+                  <h3 className="why-card__title">{item.title}</h3>
+                  <p className="why-card__desc">{item.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
