@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MessageCircle, MessageSquare, Palette, Factory, CheckCircle2 } from 'lucide-react';
+import { Phone, MessageCircle, MessageSquare, Palette, Factory, CheckCircle2, Utensils } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ServiceCard from '../components/ServiceCard';
 import { services } from '../data/services';
@@ -132,17 +132,25 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* ── CTA ─── */}
-      <section className="cta-section" aria-labelledby="services-cta-heading">
+      {/* ═══════════════ CTA BANNER ═══════════════ */}
+      <section className="cta-banner" aria-labelledby="cta-heading">
         <div className="container">
-          <motion.div className="cta-section__inner" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            <h2 id="services-cta-heading" className="cta-section__title">
-              Need a Custom Kitchen Solution?
+          <motion.div
+            className="cta-banner__inner"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="cta-banner__icon" aria-hidden="true">
+              <Utensils size={40} />
+            </div>
+            <h2 id="cta-heading" className="cta-banner__title">
+              Ready To Build Your Dream Modular Kitchen?
             </h2>
-            <p className="cta-section__sub">
-              Every home is unique — and so is every kitchen we build. Call us for a free consultation tailored to your exact needs.
+            <p className="cta-banner__sub">
+              Get a free consultation from Udaipur's top modular kitchen experts. We bring your vision to life — on time, within budget.
             </p>
-            <div className="cta-section__actions">
+            <div className="cta-banner__actions">
               <a href="tel:+919829346870" className="btn btn-white btn-lg">
                 <Phone size={18} /> Call Now
               </a>
@@ -152,7 +160,7 @@ const Services: React.FC = () => {
                 rel="noopener noreferrer"
                 className="btn btn-glass btn-lg"
               >
-                <MessageCircle size={18} /> WhatsApp Us
+                <MessageCircle size={18} /> Get Free Consultation
               </a>
             </div>
           </motion.div>
