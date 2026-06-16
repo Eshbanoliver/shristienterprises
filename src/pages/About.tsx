@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Heart, ArrowRight, MessageCircle, Phone,
-  Factory, Palette, ShieldCheck, Gem, Clock3, BadgeCheck, Trophy, Layers, Users, Flag, Briefcase, TrendingUp } from 'lucide-react';
+import { Heart, MessageCircle, Phone,
+  Factory, Palette, ShieldCheck, Gem, Clock3, BadgeCheck, Trophy, Layers, Users, Flag, Briefcase, TrendingUp, Utensils } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import aboutImg from '../assets/about-kitchen.png';
 import './About.css';
@@ -360,31 +359,31 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* ── CTA ─── */}
-      <section className="cta-section" aria-labelledby="about-cta-heading">
+      {/* ═══════════════ CTA BANNER ═══════════════ */}
+      <section className="cta-banner" aria-labelledby="cta-heading">
         <div className="container">
           <motion.div
-            className="cta-section__inner"
+            className="cta-banner__inner"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 id="about-cta-heading" className="cta-section__title">
-              Ready to Start Your Kitchen Project?
+            <div className="cta-banner__icon" aria-hidden="true">
+              <Utensils size={40} />
+            </div>
+            <h2 id="cta-heading" className="cta-banner__title">
+              Ready To Build Your Dream Modular Kitchen?
             </h2>
-            <p className="cta-section__sub">
-              Contact us today for a free consultation. Our design experts are ready to help you create the kitchen of your dreams.
+            <p className="cta-banner__sub">
+              Get a free consultation from Udaipur's top modular kitchen experts. We bring your vision to life — on time, within budget.
             </p>
-            <div className="cta-section__actions">
+            <div className="cta-banner__actions">
               <a href="tel:+919829346870" className="btn btn-white btn-lg">
-                <Phone size={18} /> Call +91 98293 46870
+                <Phone size={18} /> Call Now
               </a>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-glass btn-lg">
-                <MessageCircle size={18} /> WhatsApp Us
+                <MessageCircle size={18} /> Get Free Consultation
               </a>
-              <Link to="/contact" className="btn btn-accent btn-lg">
-                Get Free Consultation <ArrowRight size={18} />
-              </Link>
             </div>
           </motion.div>
         </div>
