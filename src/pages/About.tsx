@@ -224,31 +224,40 @@ const About: React.FC = () => {
       </section>
 
       {/* ── Our Journey Timeline ─── */}
-      <section className="section bg-light" aria-labelledby="journey-heading">
-        <div className="container">
-          <div className="text-center" style={{ marginBottom: 'var(--space-3xl)' }}>
-            <div className="section-badge">Our History</div>
-            <h2 id="journey-heading" className="section-title">Our <span>Journey</span></h2>
-            <div className="divider divider-center" />
-            <p className="section-subtitle">From humble beginnings to Udaipur's most trusted kitchen brand.</p>
+      <section className="section journey-section-creative" aria-labelledby="journey-heading">
+        {/* Abstract Background Shapes */}
+        <div className="journey-bg-shapes">
+          <div className="shape shape-1"></div>
+          <div className="shape shape-2"></div>
+        </div>
+        
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div className="text-center" style={{ marginBottom: 'var(--space-4xl)' }}>
+            <div className="section-badge section-badge--glass">Our History</div>
+            <h2 id="journey-heading" className="section-title text-white">The <span className="text-gradient-gold">Journey</span></h2>
+            <div className="divider divider-center" style={{ borderColor: 'rgba(255,255,255,0.2)' }} />
+            <p className="section-subtitle text-white-80">From humble beginnings to Udaipur's most trusted kitchen brand.</p>
           </div>
 
-          <div className="timeline">
+          <div className="creative-timeline">
+            <div className="creative-timeline-line"></div>
             {timeline.map((item, i) => (
               <motion.div
                 key={item.year}
-                className={`timeline-item ${i % 2 === 0 ? 'timeline-item--left' : 'timeline-item--right'}`}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                className={`ct-item ${i % 2 === 0 ? 'ct-item-left' : 'ct-item-right'}`}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
               >
-                <div className="timeline-card">
-                  <div className="timeline-year">{item.year}</div>
-                  <h3 className="timeline-title">{item.title}</h3>
-                  <p className="timeline-desc">{item.desc}</p>
+                <div className="ct-content">
+                  <div className="ct-year-badge">{item.year}</div>
+                  <h3 className="ct-title">{item.title}</h3>
+                  <p className="ct-desc">{item.desc}</p>
                 </div>
-                <div className="timeline-dot" aria-hidden="true" />
+                <div className="ct-dot">
+                   <div className="ct-dot-inner"></div>
+                </div>
               </motion.div>
             ))}
           </div>
