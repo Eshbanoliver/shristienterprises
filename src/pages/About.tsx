@@ -224,7 +224,7 @@ const About: React.FC = () => {
       </section>
 
       {/* ── Our Journey Timeline ─── */}
-      <section className="section journey-section-creative" aria-labelledby="journey-heading">
+      <section className="section journey-section-creative-light" aria-labelledby="journey-heading">
         {/* Abstract Background Shapes */}
         <div className="journey-bg-shapes">
           <div className="shape shape-1"></div>
@@ -233,10 +233,10 @@ const About: React.FC = () => {
         
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
           <div className="text-center" style={{ marginBottom: 'var(--space-4xl)' }}>
-            <div className="section-badge section-badge--glass">Our History</div>
-            <h2 id="journey-heading" className="section-title text-white">The <span className="text-gradient-gold">Journey</span></h2>
-            <div className="divider divider-center" style={{ borderColor: 'rgba(255,255,255,0.2)' }} />
-            <p className="section-subtitle text-white-80">From humble beginnings to Udaipur's most trusted kitchen brand.</p>
+            <div className="section-badge">Our History</div>
+            <h2 id="journey-heading" className="section-title">Our <span>Journey</span></h2>
+            <div className="divider divider-center" />
+            <p className="section-subtitle">From humble beginnings to Udaipur's most trusted kitchen brand.</p>
           </div>
 
           <div className="creative-timeline">
