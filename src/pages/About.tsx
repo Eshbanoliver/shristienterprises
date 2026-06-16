@@ -130,56 +130,93 @@ const About: React.FC = () => {
       </section>
 
       {/* ── Company Introduction ─── */}
-      <section className="section bg-white" aria-labelledby="intro-heading">
+      <section className="section bg-white about-intro-section" aria-labelledby="intro-heading">
         <div className="container">
           <div className="about-intro-grid">
             <motion.div
+              className="about-intro-text"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
             >
-              <div className="section-badge">Who We Are</div>
+              <div className="section-badge section-badge--accent">Who We Are</div>
               <h2 id="intro-heading" className="section-title">
-                Udaipur's Premier <span>Modular Kitchen</span> Company
+                Udaipur's Premier <br/><span className="text-gradient">Modular Kitchen</span> Company
               </h2>
-              <div className="divider" />
-              <p style={{ color: 'var(--text-body)', lineHeight: 1.8, marginBottom: 'var(--space-lg)', fontSize: '1.0625rem' }}>
-                Shristi Enterprises is a leading modular kitchen manufacturer and interior solutions provider based in the beautiful city of Udaipur, Rajasthan. Founded with a vision to bring world-class kitchen design and manufacturing to every home, we have grown into one of the most trusted names in the region.
+              
+              <p className="about-intro-lead">
+                Shristi Enterprises is a leading modular kitchen manufacturer and interior solutions provider based in the beautiful city of Udaipur, Rajasthan.
               </p>
-              <p style={{ color: 'var(--text-body)', lineHeight: 1.8, marginBottom: 'var(--space-xl)', fontSize: '1.0625rem' }}>
-                Our team of skilled designers, craftsmen, and installation experts work together to transform your kitchen from a concept to a stunning reality. With over 500 successful projects and 1000+ happy customers, we take immense pride in the quality of our work and the trust our clients place in us.
+              
+              <p className="about-intro-desc">
+                Founded with a vision to bring world-class kitchen design and manufacturing to every home, we have grown into one of the most trusted names in the region. Our team of skilled designers, craftsmen, and installation experts work together to transform your kitchen from a concept to a stunning reality.
               </p>
-              <div className="about-stats-row">
+
+              <ul className="about-feature-list">
+                <li><BadgeCheck className="text-primary" size={20} /> 100% Customisable Designs</li>
+                <li><BadgeCheck className="text-primary" size={20} /> Premium Marine-Grade Plywood</li>
+                <li><BadgeCheck className="text-primary" size={20} /> Factory-Finish Precision</li>
+              </ul>
+
+              <div className="about-stats-cards">
                 {[
                   { value: '500+', label: 'Projects Completed' },
                   { value: '10+', label: 'Years Experience' },
                   { value: '1000+', label: 'Happy Customers' },
-                ].map(s => (
-                  <div key={s.label} className="about-stat">
+                ].map((s, idx) => (
+                  <motion.div 
+                    key={s.label} 
+                    className="about-stat-card"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.15, duration: 0.5 }}
+                  >
                     <strong>{s.value}</strong>
                     <span>{s.label}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
 
             <motion.div
+              className="about-intro-visual"
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7 }}
-              style={{ position: 'relative' }}
             >
-              <img
-                src={aboutImg}
-                alt="Shristi Enterprises kitchen showroom in Udaipur"
-                className="about-intro__image"
-                loading="lazy"
-              />
-              <div className="about-image-badge">
-                <Heart size={20} style={{ color: 'var(--accent)' }} />
-                <span>Crafted with Love</span>
+              <div className="about-image-wrapper">
+                <div className="about-image-backdrop"></div>
+                <img
+                  src={aboutImg}
+                  alt="Shristi Enterprises kitchen showroom in Udaipur"
+                  className="about-intro__image"
+                  loading="lazy"
+                />
+                <motion.div 
+                  className="about-image-floating-badge"
+                  animate={{ y: [-10, 10, -10] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <div className="icon-circle">
+                    <Heart size={24} style={{ color: 'var(--accent)' }} />
+                  </div>
+                  <div className="text">
+                    <strong>Crafted with Love</strong>
+                    <span>in Udaipur</span>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="about-image-experience-badge"
+                  animate={{ y: [10, -10, 10] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                >
+                  <strong>10+</strong>
+                  <span>Years of<br/>Trust</span>
+                </motion.div>
               </div>
             </motion.div>
           </div>

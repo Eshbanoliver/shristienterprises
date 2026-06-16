@@ -641,3 +641,219 @@
     right: -10px;
   }
 }
+
+/* ─── Creative Company Intro ─────────────────────────────────── */
+.about-intro-section {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 100% 0%, rgba(74, 222, 128, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+}
+
+.about-intro-lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.about-intro-desc {
+  font-size: 1.0625rem;
+  color: var(--text-body);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.about-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.about-feature-list .text-primary {
+  color: #4ade80;
+}
+
+.about-stats-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about-stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.about-stat-card strong {
+  display: block;
+  font-family: var(--font-display, inherit);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4ade80;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.about-stat-card span {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-intro-visual {
+  position: relative;
+  padding: 2rem;
+}
+
+.about-image-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.about-image-backdrop {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  bottom: 2rem;
+  left: 2rem;
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(59, 130, 246, 0.1));
+  border-radius: 2rem;
+  z-index: -1;
+}
+
+.about-intro__image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.about-image-floating-badge {
+  position: absolute;
+  bottom: 40px;
+  left: -30px;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.about-image-floating-badge .icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(170, 59, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image-floating-badge .text strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.about-image-floating-badge .text span {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.about-image-experience-badge {
+  position: absolute;
+  top: 40px;
+  right: -30px;
+  background: var(--gradient-primary, #0a0a0a);
+  color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(74, 222, 128, 0.3);
+  z-index: 2;
+  border: 4px solid white;
+}
+
+.about-image-experience-badge strong {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-image-experience-badge span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+  .about-stats-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .about-stat-card strong {
+    font-size: 2rem;
+  }
+  .about-intro__image {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-stats-cards {
+    grid-template-columns: 1fr;
+  }
+  .about-intro-visual {
+    padding: 0;
+    margin-top: 2rem;
+  }
+  .about-image-backdrop {
+    top: -1rem; right: -1rem; bottom: 1rem; left: 1rem;
+  }
+  .about-image-floating-badge {
+    left: 10px; bottom: 10px;
+  }
+  .about-image-experience-badge {
+    right: 10px; top: 10px;
+    width: 100px; height: 100px;
+  }
+  .about-image-experience-badge strong { font-size: 2rem; }
+}
