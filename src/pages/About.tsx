@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Heart, ArrowRight, MessageCircle, Phone,
-  Factory, Palette, ShieldCheck, Gem, Clock3, BadgeCheck, Trophy, Layers, Users } from 'lucide-react';
+  Factory, Palette, ShieldCheck, Gem, Clock3, BadgeCheck, Trophy, Layers, Users, Flag, Briefcase, TrendingUp } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import aboutImg from '../assets/about-kitchen.png';
 import './About.css';
@@ -10,19 +10,39 @@ import './About.css';
 const WA_LINK = 'https://wa.me/919829346870?text=Hello%20Shristi%20Enterprises%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services.';
 
 const timeline = [
-  { year: '2014', title: 'The Beginning', desc: 'Shristi Enterprises was founded in Udaipur with a simple mission — to provide premium quality modular kitchens at honest pricing.' },
-  { year: '2016', title: 'First 100 Projects', desc: 'Completed our first 100 kitchen installations, building a reputation for exceptional craftsmanship and customer service in Udaipur.' },
-  { year: '2018', title: 'Expanded Services', desc: 'Expanded into complete interior solutions including wardrobe design, cabinet manufacturing, and interior consultation services.' },
-  { year: '2020', title: 'Modern Manufacturing', desc: 'Upgraded to advanced CNC machinery and modern manufacturing processes, significantly improving precision and production capacity.' },
-  { year: '2022', title: '400+ Happy Homes', desc: 'Milestone of 400+ successful kitchen installations, becoming one of Udaipur\'s most trusted modular kitchen brands.' },
-  { year: '2024+', title: 'Growing Stronger', desc: 'Continuing to serve Udaipur and surrounding Rajasthan areas, expanding our showroom and adding new design capabilities.' },
+  { year: '2014', icon: <Flag className="ct-icon" />, title: 'The Beginning', desc: 'Shristi Enterprises was founded in Udaipur with a simple mission — to provide premium quality modular kitchens at honest pricing.' },
+  { year: '2016', icon: <Trophy className="ct-icon" />, title: 'First 100 Projects', desc: 'Completed our first 100 kitchen installations, building a reputation for exceptional craftsmanship and customer service in Udaipur.' },
+  { year: '2018', icon: <Briefcase className="ct-icon" />, title: 'Expanded Services', desc: 'Expanded into complete interior solutions including wardrobe design, cabinet manufacturing, and interior consultation services.' },
+  { year: '2020', icon: <Factory className="ct-icon" />, title: 'Modern Manufacturing', desc: 'Upgraded to advanced CNC machinery and modern manufacturing processes, significantly improving precision and production capacity.' },
+  { year: '2022', icon: <Heart className="ct-icon" />, title: '400+ Happy Homes', desc: 'Milestone of 400+ successful kitchen installations, becoming one of Udaipur\'s most trusted modular kitchen brands.' },
+  { year: '2024+', icon: <TrendingUp className="ct-icon" />, title: 'Growing Stronger', desc: 'Continuing to serve Udaipur and surrounding Rajasthan areas, expanding our showroom and adding new design capabilities.' },
 ];
 
 const expertise = [
-  { icon: <Factory size={28} />, title: 'Modular Kitchen Manufacturing', desc: 'State-of-the-art manufacturing facility producing precision-crafted modular kitchen units using premium grade materials and advanced CNC machinery.' },
-  { icon: <Palette size={28} />, title: 'Kitchen Design', desc: 'Expert design team creating beautiful, functional kitchen layouts in 3D visualization. From contemporary to classic, we design kitchens that suit your style.' },
-  { icon: <Layers size={28} />, title: 'Storage Optimization', desc: 'Smart space planning and innovative storage solutions that maximize every inch of your kitchen, making it more organized and efficient.' },
-  { icon: <Users size={28} />, title: 'Interior Solutions', desc: 'Complete interior services including wardrobe design, custom cabinets, TV units, and more — making us your one-stop interior partner.' },
+  { 
+    icon: <Factory size={28} />, 
+    title: 'Modular Kitchen Manufacturing', 
+    desc: 'State-of-the-art manufacturing facility producing precision-crafted modular kitchen units using premium grade materials and advanced CNC machinery.',
+    colorClass: 'expertise-card--emerald'
+  },
+  { 
+    icon: <Palette size={28} />, 
+    title: 'Kitchen Design', 
+    desc: 'Expert design team creating beautiful, functional kitchen layouts in 3D visualization. From contemporary to classic, we design kitchens that suit your style.',
+    colorClass: 'expertise-card--violet'
+  },
+  { 
+    icon: <Layers size={28} />, 
+    title: 'Storage Optimization', 
+    desc: 'Smart space planning and innovative storage solutions that maximize every inch of your kitchen, making it more organized and efficient.',
+    colorClass: 'expertise-card--amber'
+  },
+  { 
+    icon: <Users size={28} />, 
+    title: 'Interior Solutions', 
+    desc: 'Complete interior services including wardrobe design, custom cabinets, TV units, and more — making us your one-stop interior partner.',
+    colorClass: 'expertise-card--cyan'
+  },
 ];
 
 const trustFeatures = [
@@ -252,7 +272,10 @@ const About: React.FC = () => {
               >
                 <div className="ct-content">
                   <div className="ct-year-badge">{item.year}</div>
-                  <h3 className="ct-title">{item.title}</h3>
+                  <div className="ct-header-flex">
+                    {item.icon}
+                    <h3 className="ct-title">{item.title}</h3>
+                  </div>
                   <p className="ct-desc">{item.desc}</p>
                 </div>
                 <div className="ct-dot">
@@ -265,11 +288,18 @@ const About: React.FC = () => {
       </section>
 
       {/* ── Our Expertise ─── */}
-      <section className="section bg-white" aria-labelledby="expertise-heading">
-        <div className="container">
+      <section className="expertise-section-creative" aria-labelledby="expertise-heading">
+        {/* Floating background blobs for premium feel */}
+        <div className="expertise-bg-shapes">
+          <div className="shape shape-1"></div>
+          <div className="shape shape-2"></div>
+          <div className="shape shape-3"></div>
+        </div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="text-center" style={{ marginBottom: 'var(--space-3xl)' }}>
             <div className="section-badge">What We Do Best</div>
-            <h2 id="expertise-heading" className="section-title">Our <span>Expertise</span></h2>
+            <h2 id="expertise-heading" className="section-title">Our <span className="expertise-title-accent">Expertise</span></h2>
             <div className="divider divider-center" />
           </div>
 
@@ -277,15 +307,18 @@ const About: React.FC = () => {
             {expertise.map((e, i) => (
               <motion.div
                 key={e.title}
-                className="expertise-card"
+                className={`expertise-card ${e.colorClass}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: i * 0.1 }}
               >
-                <div className="expertise-card__icon">{e.icon}</div>
+                <div className="expertise-card__icon-wrap">
+                  <div className="expertise-card__icon">{e.icon}</div>
+                </div>
                 <h3 className="expertise-card__title">{e.title}</h3>
                 <p className="expertise-card__desc">{e.desc}</p>
+                <div className="expertise-card__glow"></div>
               </motion.div>
             ))}
           </div>
