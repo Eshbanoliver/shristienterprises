@@ -43,25 +43,89 @@ const About: React.FC = () => {
         canonicalUrl="https://shristienterprises.in/about"
       />
 
-      {/* ── Page Hero ─── */}
-      <section className="page-hero" aria-labelledby="about-hero-heading">
-        <div className="page-hero__overlay" />
-        <div className="container" style={{ position: 'relative', zIndex: 1, paddingTop: 'var(--space-4xl)', paddingBottom: 'var(--space-4xl)' }}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="section-badge" style={{ background: 'rgba(255,255,255,0.15)', borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
-              About Us
-            </div>
-            <h1 id="about-hero-heading" className="page-hero__title">
-              Our Story of <span>Excellence</span>
-            </h1>
-            <p className="page-hero__subtitle">
-              A decade of craftsmanship, quality, and passion for transforming kitchens in Udaipur.
-            </p>
-          </motion.div>
+      {/* ── Creative Page Hero ─── */}
+      <section className="about-hero-creative" aria-labelledby="about-hero-heading">
+        {/* Background Animated Gradients / Blobs */}
+        <div className="ahc-bg">
+          <div className="ahc-blob ahc-blob-1"></div>
+          <div className="ahc-blob ahc-blob-2"></div>
+          <div className="ahc-blob ahc-blob-3"></div>
+          <div className="ahc-grid-overlay"></div>
+        </div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div className="ahc-content-wrapper">
+            <motion.div
+              className="ahc-text-column"
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className="ahc-badge">
+                <span className="ahc-badge-icon">✨</span> Our Story
+              </div>
+              <h1 id="about-hero-heading" className="ahc-title">
+                Crafting Spaces That <span className="text-gradient">Inspire</span> Every Day.
+              </h1>
+              <p className="ahc-subtitle">
+                A decade of dedication, precision, and passion for transforming ordinary houses into extraordinary homes across Udaipur.
+              </p>
+              
+              <div className="ahc-actions">
+                 <div className="ahc-stats-mini">
+                    <div className="ahc-stat-item">
+                       <span className="ahc-stat-num">10+</span>
+                       <span className="ahc-stat-label">Years of<br/>Excellence</span>
+                    </div>
+                    <div className="ahc-stat-item">
+                       <span className="ahc-stat-num">500+</span>
+                       <span className="ahc-stat-label">Projects<br/>Delivered</span>
+                    </div>
+                 </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="ahc-visual-column"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+            >
+              {/* Creative Floating Glass Cards */}
+              <div className="ahc-glass-card ahc-card-main">
+                <div className="ahc-card-icon-wrapper">
+                   <Gem className="ahc-card-icon" />
+                </div>
+                <h3>Uncompromising Quality</h3>
+                <p>We source only the finest materials for lasting durability and elegance.</p>
+              </div>
+
+              <motion.div 
+                className="ahc-glass-card ahc-card-floating-1"
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                 <Palette className="ahc-card-icon sm" />
+                 <div className="ahc-fc-text">Bespoke Design</div>
+              </motion.div>
+
+              <motion.div 
+                className="ahc-glass-card ahc-card-floating-2"
+                animate={{ y: [0, 15, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              >
+                 <ShieldCheck className="ahc-card-icon sm" />
+                 <div className="ahc-fc-text">Trusted Process</div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+        
+        {/* Bottom decorative wave */}
+        <div className="ahc-wave">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path fill="#ffffff" fillOpacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+          </svg>
         </div>
       </section>
 
