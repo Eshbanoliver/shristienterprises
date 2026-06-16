@@ -46,12 +46,12 @@ const expertise = [
 ];
 
 const trustFeatures = [
-  { icon: <Trophy size={28} />, title: '10+ Years Experience', desc: 'Over a decade of transforming kitchens and spaces in Udaipur with consistent excellence.' },
-  { icon: <BadgeCheck size={28} />, title: '500+ Projects Delivered', desc: 'Half a thousand successful kitchen installations — each one a testament to our quality.' },
-  { icon: <ShieldCheck size={28} />, title: '5-Year Structural Warranty', desc: 'Comprehensive warranty coverage giving you complete peace of mind after installation.' },
-  { icon: <Gem size={28} />, title: 'Premium Materials Only', desc: 'We never compromise on material quality — only the best marine ply and hardware brands.' },
-  { icon: <Clock3 size={28} />, title: 'On-Time Delivery', desc: 'We respect your time. Projects delivered on the committed date, every single time.' },
-  { icon: <Palette size={28} />, title: 'Endless Customization', desc: '300+ finish options, custom dimensions, unique layouts — all tailored to your vision.' },
+  { icon: <Trophy size={28} />, title: '10+ Years Experience', desc: 'Over a decade of transforming kitchens and spaces in Udaipur with consistent excellence.', colorClass: 'trust-card--amber' },
+  { icon: <BadgeCheck size={28} />, title: '500+ Projects Delivered', desc: 'Half a thousand successful kitchen installations — each one a testament to our quality.', colorClass: 'trust-card--emerald' },
+  { icon: <ShieldCheck size={28} />, title: '5-Year Structural Warranty', desc: 'Comprehensive warranty coverage giving you complete peace of mind after installation.', colorClass: 'trust-card--cyan' },
+  { icon: <Gem size={28} />, title: 'Premium Materials Only', desc: 'We never compromise on material quality — only the best marine ply and hardware brands.', colorClass: 'trust-card--rose' },
+  { icon: <Clock3 size={28} />, title: 'On-Time Delivery', desc: 'We respect your time. Projects delivered on the committed date, every single time.', colorClass: 'trust-card--violet' },
+  { icon: <Palette size={28} />, title: 'Endless Customization', desc: '300+ finish options, custom dimensions, unique layouts — all tailored to your vision.', colorClass: 'trust-card--teal' },
 ];
 
 const About: React.FC = () => {
@@ -326,11 +326,17 @@ const About: React.FC = () => {
       </section>
 
       {/* ── Why Clients Trust Us ─── */}
-      <section className="section bg-light" aria-labelledby="trust-heading">
-        <div className="container">
+      <section className="trust-section-creative" aria-labelledby="trust-heading">
+        {/* Floating background blobs for premium touch */}
+        <div className="trust-bg-shapes">
+          <div className="shape shape-1"></div>
+          <div className="shape shape-2"></div>
+        </div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="text-center" style={{ marginBottom: 'var(--space-3xl)' }}>
             <div className="section-badge">Client Trust</div>
-            <h2 id="trust-heading" className="section-title">Why Clients <span>Trust Us</span></h2>
+            <h2 id="trust-heading" className="section-title">Why Clients <span className="trust-title-accent">Trust Us</span></h2>
             <div className="divider divider-center" />
           </div>
 
@@ -338,12 +344,13 @@ const About: React.FC = () => {
             {trustFeatures.map((f, i) => (
               <motion.div
                 key={f.title}
-                className="trust-card glass-card"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                className={`trust-card ${f.colorClass}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
               >
+                <div className="trust-card__number">{`0${i + 1}`}</div>
                 <div className="trust-card__icon" aria-hidden="true">{f.icon}</div>
                 <h3 className="trust-card__title">{f.title}</h3>
                 <p className="trust-card__desc">{f.desc}</p>
