@@ -77,7 +77,7 @@ export const services: Service[] = [
     benefits: ['Space Efficient', 'Easy Workflow', 'Budget Friendly', 'Modern Aesthetic'],
     icon: 'Minus',
     category: 'kitchen',
-    image: 'https://images.unsplash.com/photo-1556912998-c57cc6b63ce7?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&q=80',
   },
   {
     id: 'custom-kitchen',
@@ -86,7 +86,7 @@ export const services: Service[] = [
     benefits: ['Fully Bespoke', 'Any Shape or Size', 'Premium Finishes', 'Unique to You'],
     icon: 'Sparkles',
     category: 'kitchen',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80',
   },
   {
     id: 'kitchen-renovation',
@@ -95,7 +95,7 @@ export const services: Service[] = [
     benefits: ['Cost-Effective', 'Minimal Disruption', 'Fast Turnaround', 'Updated Look'],
     icon: 'RefreshCw',
     category: 'interior',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&q=80',
   },
   {
     id: 'wardrobe-design',
@@ -104,7 +104,7 @@ export const services: Service[] = [
     benefits: ['Smart Organization', 'Custom Compartments', 'Soft-Close Fittings', 'Multiple Finishes'],
     icon: 'DoorOpen',
     category: 'interior',
-    image: 'https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&q=80',
   },
   {
     id: 'cabinet-manufacturing',
@@ -113,7 +113,7 @@ export const services: Service[] = [
     benefits: ['Durable Construction', 'Variety of Finishes', 'Custom Dimensions', 'Multiple Room Types'],
     icon: 'Package',
     category: 'interior',
-    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80',
   },
   {
     id: 'storage-solutions',
@@ -122,7 +122,7 @@ export const services: Service[] = [
     benefits: ['Optimized Space', 'Hidden Storage', 'Modular Systems', 'Easy Access Design'],
     icon: 'Archive',
     category: 'interior',
-    image: 'https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1597072689227-8882273e8f6a?auto=format&fit=crop&q=80',
   },
   {
     id: 'kitchen-accessories',
@@ -131,7 +131,7 @@ export const services: Service[] = [
     benefits: ['Premium Hardware', 'Expert Installation', 'Lifetime Durability', 'Wide Range'],
     icon: 'Wrench',
     category: 'interior',
-    image: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&q=80',
   },
   {
     id: 'interior-consultation',
@@ -140,6 +140,6 @@ export const services: Service[] = [
     benefits: ['Expert Guidance', '3D Visualization', 'Material Samples', 'Budget Planning'],
     icon: 'MessageSquare',
     category: 'interior',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80',
   },
 ];

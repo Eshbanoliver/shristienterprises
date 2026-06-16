@@ -51,7 +51,7 @@ const Testimonials: React.FC = () => {
       {/* ── Page Hero ─── */}
       <section className="page-hero" aria-labelledby="testimonials-hero-heading">
         <div className="page-hero__overlay" />
-        <div className="container" style={{ position: 'relative', zIndex: 1, paddingTop: 'var(--space-4xl)', paddingBottom: 'var(--space-4xl)' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="section-badge" style={{ background: 'rgba(255,255,255,0.15)', borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
               Testimonials
