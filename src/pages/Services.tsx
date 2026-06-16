@@ -90,33 +90,39 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* ── Process Section ─── */}
-      <section className="section bg-white" aria-labelledby="process-heading">
-        <div className="container">
+      {/* ── Process Section (Creative & Colorful) ─── */}
+      <section className="process-section-creative" aria-labelledby="process-heading">
+        {/* Floating background decorative shapes */}
+        <div className="process-bg-shapes">
+          <div className="shape shape-1"></div>
+          <div className="shape shape-2"></div>
+        </div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="text-center" style={{ marginBottom: 'var(--space-3xl)' }}>
             <div className="section-badge">How It Works</div>
             <h2 id="process-heading" className="section-title">
-              Our Simple <span>4-Step Process</span>
+              Our Simple <span className="process-title-accent">4-Step Process</span>
             </h2>
             <div className="divider divider-center" />
           </div>
 
           <div className="process-grid">
             {[
-              { step: '01', title: 'Free Consultation', desc: 'We visit your home, understand your needs, take measurements, and discuss your vision and budget.', icon: <MessageSquare size={28} /> },
-              { step: '02', title: 'Design & 3D Visualization', desc: 'Our designers create a personalized layout with 3D visuals so you can see exactly how your kitchen will look.', icon: <Palette size={28} /> },
-              { step: '03', title: 'Manufacturing', desc: 'Precision manufacturing at our facility using premium materials and advanced CNC machinery.', icon: <Factory size={28} /> },
-              { step: '04', title: 'Installation & Handover', desc: 'Expert installation team sets up your kitchen and hands it over — clean, ready to use, and perfect.', icon: <CheckCircle2 size={28} /> },
+              { step: '01', title: 'Free Consultation', desc: 'We visit your home, understand your needs, take measurements, and discuss your vision and budget.', icon: <MessageSquare size={28} />, colorClass: 'process-card--amber' },
+              { step: '02', title: 'Design & 3D Visualization', desc: 'Our designers create a personalized layout with 3D visuals so you can see exactly how your kitchen will look.', icon: <Palette size={28} />, colorClass: 'process-card--violet' },
+              { step: '03', title: 'Manufacturing', desc: 'Precision manufacturing at our facility using premium materials and advanced CNC machinery.', icon: <Factory size={28} />, colorClass: 'process-card--emerald' },
+              { step: '04', title: 'Installation & Handover', desc: 'Expert installation team sets up your kitchen and hands it over — clean, ready to use, and perfect.', icon: <CheckCircle2 size={28} />, colorClass: 'process-card--cyan' },
             ].map((step, i) => (
               <motion.div
                 key={step.step}
-                className="process-card"
+                className={`process-card ${step.colorClass}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.12 }}
               >
-                <div className="process-step-num">{step.step}</div>
+                <div className="process-card__number">{step.step}</div>
                 <div className="process-card__icon" aria-hidden="true">{step.icon}</div>
                 <h3 className="process-card__title">{step.title}</h3>
                 <p className="process-card__desc">{step.desc}</p>
