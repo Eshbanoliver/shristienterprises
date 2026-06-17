@@ -467,7 +467,7 @@ const Home: React.FC = () => {
       {/* ═══════════════ TESTIMONIALS PREVIEW ═══════════════ */}
       <section className="section bg-light" aria-labelledby="testimonials-preview-heading">
         <div className="container">
-          <div className="text-center" style={{ marginBottom: 'var(--space-3xl)' }}>
+          <div className="text-center" style={{ marginBottom: 'var(--space-2xl)' }}>
             <div className="section-badge">Customer Stories</div>
             <h2 id="testimonials-preview-heading" className="section-title">
               What Our <span>Happy Customers</span> Say
@@ -478,11 +478,36 @@ const Home: React.FC = () => {
             </p>
           </div>
 
+          {/* Aggregate Trust Badge */}
+          <div className="testimonials-trust-badge">
+            <div className="testimonials-trust-badge__stars">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} size={16} fill="#F59E0B" color="#F59E0B" />
+              ))}
+            </div>
+            <span className="testimonials-trust-badge__text">4.9 / 5 Stars Rating</span>
+            <span className="testimonials-trust-badge__subtext">based on 1000+ happy homes in Udaipur</span>
+            <span className="testimonials-trust-badge__pill">
+              <CheckCircle2 size={12} /> 100% Verified Reviews
+            </span>
+          </div>
+
+          {/* Dual-Row Marquee Container */}
           <div className="testimonials-marquee-container">
-            <div className="testimonials-marquee-track">
-              {[...testimonials, ...testimonials].map((t, i) => (
-                <div key={`${t.id}-${i}`} className="marquee-item">
-                  <TestimonialCard testimonial={t} index={i % testimonials.length} />
+            {/* Row 1: Left scrolling */}
+            <div className="testimonials-marquee-track testimonials-marquee-track--left">
+              {[...testimonials.slice(0, 6), ...testimonials.slice(0, 6)].map((t, i) => (
+                <div key={`left-${t.id}-${i}`} className="marquee-item">
+                  <TestimonialCard testimonial={t} index={i % 6} />
+                </div>
+              ))}
+            </div>
+
+            {/* Row 2: Right scrolling */}
+            <div className="testimonials-marquee-track testimonials-marquee-track--right" style={{ marginTop: 'var(--space-lg)' }}>
+              {[...testimonials.slice(6, 12), ...testimonials.slice(6, 12)].map((t, i) => (
+                <div key={`right-${t.id}-${i}`} className="marquee-item">
+                  <TestimonialCard testimonial={t} index={i % 6} />
                 </div>
               ))}
             </div>

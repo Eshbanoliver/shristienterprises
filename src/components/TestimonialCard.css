@@ -6,10 +6,10 @@
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
-  transition: all 0.35s ease;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
@@ -17,10 +17,39 @@
 }
 
 .testimonial-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-green-lg);
   border-color: rgba(0, 128, 0, 0.25);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Header with Stars and Verified status */
+.testimonial-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-card__verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: rgba(34, 197, 94, 0.08);
+  color: #16a34a;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.testimonial-card__verified-icon {
+  flex-shrink: 0;
 }
 
 /* Quote mark */
@@ -30,11 +59,17 @@
   right: 20px;
   font-size: 5rem;
   line-height: 1;
-  color: rgba(0, 128, 0, 0.08);
+  color: rgba(0, 128, 0, 0.06);
   font-family: Georgia, serif;
   font-weight: 900;
   pointer-events: none;
   user-select: none;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.testimonial-card:hover .testimonial-card__quote {
+  color: rgba(0, 128, 0, 0.12);
+  transform: scale(1.15) rotate(-8deg);
 }
 
 /* Stars */
@@ -53,6 +88,13 @@
 }
 
 /* Service Tag */
+.testimonial-card__footer-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: auto;
+}
+
 .testimonial-card__service {
   display: inline-block;
   padding: 4px 12px;

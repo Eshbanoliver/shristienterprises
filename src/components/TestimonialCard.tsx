@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Star } from 'lucide-react';
+import { Star, Check } from 'lucide-react';
 import type { Testimonial } from '../data/testimonials';
 import './TestimonialCard.css';
 
@@ -21,20 +21,27 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, index = 
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, delay: index * 0.1, ease: 'easeOut' }}
       aria-label={`Testimonial by ${testimonial.name}`}
+      style={{ borderTop: `4px solid ${testimonial.color}` } as React.CSSProperties}
     >
       {/* Quote icon */}
       <div className="testimonial-card__quote" aria-hidden="true">"</div>
 
-      {/* Stars */}
-      <div className="testimonial-card__stars" aria-label={`${testimonial.rating} out of 5 stars`}>
-        {Array.from({ length: 5 }).map((_, i) => (
-          <Star
-            key={i}
-            size={16}
-            fill={i < testimonial.rating ? '#F59E0B' : 'none'}
-            color={i < testimonial.rating ? '#F59E0B' : '#d1d5db'}
-          />
-        ))}
+      {/* Header with stars & verified badge */}
+      <div className="testimonial-card__header">
+        <div className="testimonial-card__stars" aria-label={`${testimonial.rating} out of 5 stars`}>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star
+              key={i}
+              size={14}
+              fill={i < testimonial.rating ? '#F59E0B' : 'none'}
+              color={i < testimonial.rating ? '#F59E0B' : '#d1d5db'}
+            />
+          ))}
+        </div>
+        <div className="testimonial-card__verified">
+          <Check size={11} strokeWidth={3} className="testimonial-card__verified-icon" />
+          <span>Verified</span>
+        </div>
       </div>
 
       {/* Review Text */}
@@ -43,7 +50,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, index = 
       </blockquote>
 
       {/* Service Tag */}
-      <span className="testimonial-card__service">{testimonial.service}</span>
+      <div className="testimonial-card__footer-meta">
+        <span className="testimonial-card__service">{testimonial.service}</span>
+      </div>
 
       {/* Author */}
       <div className="testimonial-card__author">

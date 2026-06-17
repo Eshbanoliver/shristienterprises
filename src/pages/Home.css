@@ -792,24 +792,69 @@
 }
 
 /* ── TESTIMONIALS PREVIEW ──────────────────────────────────────── */
+.testimonials-trust-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  font-size: 0.9375rem;
+}
+
+.testimonials-trust-badge__stars {
+  display: flex;
+  gap: 2px;
+}
+
+.testimonials-trust-badge__text {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.testimonials-trust-badge__subtext {
+  color: var(--text-muted);
+}
+
+.testimonials-trust-badge__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 128, 0, 0.08);
+  color: var(--primary);
+  padding: 3px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 128, 0, 0.15);
+  margin-left: 4px;
+}
+
 .testimonials-marquee-container {
   overflow: hidden;
   position: relative;
   width: 100%;
   padding: var(--space-md) 0;
-  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
 
 .testimonials-marquee-track {
   display: flex;
   gap: var(--space-xl);
   width: max-content;
-  animation: scroll-marquee 40s linear infinite;
 }
 
 .testimonials-marquee-track:hover {
   animation-play-state: paused;
+}
+
+.testimonials-marquee-track--left {
+  animation: scroll-marquee-left 45s linear infinite;
+}
+
+.testimonials-marquee-track--right {
+  animation: scroll-marquee-right 45s linear infinite;
 }
 
 .marquee-item {
@@ -817,12 +862,21 @@
   flex-shrink: 0;
 }
 
-@keyframes scroll-marquee {
+@keyframes scroll-marquee-left {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(calc(-50% - (var(--space-xl) / 2)));
+  }
+}
+
+@keyframes scroll-marquee-right {
+  0% {
+    transform: translateX(calc(-50% - (var(--space-xl) / 2)));
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
