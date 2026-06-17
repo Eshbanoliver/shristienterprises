@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Clock, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Phone, MapPin, Clock, Send, CheckCircle2, AlertCircle, Sparkles, Award, Users } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import './Contact.css';
+
+// Import showcase kitchen image for hero visual
+import modularKitchenImg from '../assets/ai_kitchens/modular_kitchen_design_1781325837835.png';
 
 const WA_LINK = 'https://wa.me/919829346870';
 
@@ -116,21 +119,86 @@ const Contact: React.FC = () => {
         canonicalUrl="https://shristienterprises.in/contact"
       />
 
-      {/* ── Page Hero ─── */}
-      <section className="page-hero" aria-labelledby="contact-hero-heading">
-        <div className="page-hero__overlay" />
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="section-badge" style={{ background: 'rgba(255,255,255,0.15)', borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
-              Contact Us
-            </div>
-            <h1 id="contact-hero-heading" className="page-hero__title">
-              Let's Build Your <span>Dream Kitchen</span>
-            </h1>
-            <p className="page-hero__subtitle">
-              Reach out today for a free consultation. We're ready to bring your vision to life.
-            </p>
-          </motion.div>
+      {/* ── Contact Hero ─── */}
+      <section className="contact-hero" aria-labelledby="contact-hero-heading">
+        <div className="contact-hero__bg-glow" />
+        <div className="contact-hero__grid-pattern" />
+        <div className="container contact-hero__container">
+          <div className="contact-hero__grid">
+            {/* Left Column: Title & Intro */}
+            <motion.div 
+              className="contact-hero__content"
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
+            >
+              <div className="section-badge contact-hero__badge">
+                <Sparkles size={12} fill="currentColor" style={{ marginRight: '6px' }} /> Let's Connect
+              </div>
+              <h1 id="contact-hero-heading" className="contact-hero__title">
+                Let's Build Your <br />
+                <span className="contact-hero__title-highlight">Dream Kitchen</span>
+              </h1>
+              <p className="contact-hero__subtitle">
+                Reach out today for a free design consultation. Our modular kitchen experts in Udaipur are ready to bring your vision to life.
+              </p>
+              
+              <div className="contact-hero__quick-tags">
+                <span className="contact-hero__tag">
+                  <Phone size={13} /> 100% Free Consultation
+                </span>
+                <span className="contact-hero__tag">
+                  <MapPin size={13} /> Udaipur Showroom
+                </span>
+                <span className="contact-hero__tag">
+                  <Clock size={13} /> Quick Response
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Right Column: Visual Showcase */}
+            <motion.div 
+              className="contact-hero__visual"
+              initial={{ opacity: 0, scale: 0.95, x: 40 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
+            >
+              <div className="contact-hero__image-wrapper">
+                <div className="contact-hero__image-glow" />
+                <img 
+                  src={modularKitchenImg} 
+                  alt="Premium modular kitchen design by Shristi Enterprises" 
+                  className="contact-hero__image" 
+                />
+                
+                {/* Floating Badge 1 */}
+                <motion.div 
+                  className="contact-hero__floating-card contact-hero__floating-card--1"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
+                >
+                  <Award size={18} style={{ color: 'var(--accent)' }} />
+                  <div>
+                    <strong>10+ Years</strong>
+                    <span>Craftsmanship</span>
+                  </div>
+                </motion.div>
+
+                {/* Floating Badge 2 */}
+                <motion.div 
+                  className="contact-hero__floating-card contact-hero__floating-card--2"
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 1.5 }}
+                >
+                  <Users size={18} style={{ color: 'var(--secondary)' }} />
+                  <div>
+                    <strong>500+ Homes</strong>
+                    <span>Transformed</span>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
