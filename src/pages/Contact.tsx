@@ -49,15 +49,30 @@ const Contact: React.FC = () => {
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validate = (): FormErrors => {
     const e: FormErrors = {};
-    if (!formData.name.trim() || formData.name.length < 2) e.name = 'Name must be at least 2 characters';
-    if (!formData.phone.trim() || !/^[6-9]\d{9}$/.test(formData.phone.replace(/\s/g, ''))) e.phone = 'Enter a valid 10-digit Indian mobile number';
-    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) e.email = 'Enter a valid email address';
-    if (!formData.service) e.service = 'Please select a service';
-    if (!formData.message.trim() || formData.message.length < 10) e.message = 'Message must be at least 10 characters';
+    if (!formData.name.trim() || formData.name.length < 2) {
+      e.name = 'Name must be at least 2 characters';
+    }
+
+    const cleanPhone = formData.phone.replace(/[\s\-\+\(\)]/g, '');
+    const isValidPhone = /^(?:91|0)?[6-9]\d{9}$/.test(cleanPhone);
+    if (!formData.phone.trim()) {
+      e.phone = 'Phone number is required';
+    } else if (!isValidPhone) {
+      e.phone = 'Enter a valid Indian mobile number (e.g. 9829346870)';
+    }
+
+    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      e.email = 'Enter a valid email address';
+    }
+    if (!formData.service) {
+      e.service = 'Please select a service';
+    }
+    if (!formData.message.trim()) {
+      e.message = 'Message is required';
+    }
     return e;
   };
 
@@ -69,7 +84,7 @@ const Contact: React.FC = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -77,20 +92,20 @@ const Contact: React.FC = () => {
       return;
     }
 
-    setIsSubmitting(true);
-    // Simulate form submission — redirect to WhatsApp with message
+    setSubmitted(true);
     const waMsg = encodeURIComponent(
       `Hello Shristi Enterprises!\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email || 'N/A'}\nService: ${formData.service}\n\nMessage: ${formData.message}`
     );
 
-    // Short delay for UX
-    await new Promise(r => setTimeout(r, 800));
-    setIsSubmitting(false);
-    setSubmitted(true);
-
-    setTimeout(() => {
-      window.open(`${WA_LINK}?text=${waMsg}`, '_blank', 'noopener,noreferrer');
-    }, 1200);
+    const waUrl = `${WA_LINK}?text=${waMsg}`;
+    
+    // Open synchronously inside user interaction click event loop to prevent popup blocking
+    const newWindow = window.open(waUrl, '_blank', 'noopener,noreferrer');
+    
+    // If the browser blocked the popup, fallback to navigating the current tab
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+      window.location.href = waUrl;
+    }
   };
 
   return (
@@ -218,10 +233,32 @@ const Contact: React.FC = () => {
                     className="form-success"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
+                    style={{ padding: 'var(--space-md) 0' }}
                   >
-                    <CheckCircle2 size={48} color="var(--primary)" />
+                    <CheckCircle2 size={54} color="var(--primary)" style={{ marginBottom: '8px' }} />
                     <h4>Message Sent!</h4>
-                    <p>Opening WhatsApp to connect you with our team instantly. We'll respond within minutes!</p>
+                    <p style={{ marginBottom: 'var(--space-md)' }}>
+                      Opening WhatsApp to connect you with our team. If it did not open automatically, click the button below to start the chat:
+                    </p>
+                    <a
+                      href={`${WA_LINK}?text=${encodeURIComponent(
+                        `Hello Shristi Enterprises!\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email || 'N/A'}\nService: ${formData.service}\n\nMessage: ${formData.message}`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary"
+                      style={{ width: '100%', justifyContent: 'center' }}
+                    >
+                      Chat on WhatsApp
+                    </a>
+                    <button
+                      type="button"
+                      onClick={() => setSubmitted(false)}
+                      className="btn btn-secondary btn-sm"
+                      style={{ marginTop: 'var(--space-md)', fontSize: '0.8rem', padding: '6px 16px' }}
+                    >
+                      Send Another Message
+                    </button>
                   </motion.div>
                 ) : (
                   <form
@@ -341,15 +378,9 @@ const Contact: React.FC = () => {
                     <button
                       type="submit"
                       className="btn btn-primary btn-lg form-submit"
-                      disabled={isSubmitting}
                       aria-label="Submit contact form"
                     >
-                      {isSubmitting ? (
-                        <span className="form-spinner" aria-hidden="true" />
-                      ) : (
-                        <Send size={18} />
-                      )}
-                      {isSubmitting ? 'Sending...' : 'Send via WhatsApp'}
+                      <Send size={18} /> Send via WhatsApp
                     </button>
 
                     <p className="form-note">

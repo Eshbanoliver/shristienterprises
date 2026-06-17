@@ -1,5 +1,5 @@
 import React from 'react';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
@@ -59,34 +59,32 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes('Shristi') ? title : `${title} | Shristi Enterprises Udaipur`;
 
   return (
-    <HelmetProvider>
-      <Helmet>
-        <title>{fullTitle}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Shristi Enterprises" />
-        <link rel="canonical" href={canonicalUrl} />
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Shristi Enterprises" />
+      <link rel="canonical" href={canonicalUrl} />
 
-        {/* Open Graph */}
-        <meta property="og:type" content={pageType} />
-        <meta property="og:title" content={fullTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:site_name" content="Shristi Enterprises" />
-        <meta property="og:locale" content="en_IN" />
+      {/* Open Graph */}
+      <meta property="og:type" content={pageType} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:site_name" content="Shristi Enterprises" />
+      <meta property="og:locale" content="en_IN" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={fullTitle} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
 
-        {/* Schema Markup */}
-        <script type="application/ld+json">{JSON.stringify(SCHEMA_MARKUP)}</script>
-      </Helmet>
-    </HelmetProvider>
+      {/* Schema Markup */}
+      <script type="application/ld+json">{JSON.stringify(SCHEMA_MARKUP)}</script>
+    </Helmet>
   );
 };
 
