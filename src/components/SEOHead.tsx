@@ -65,6 +65,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Shristi Enterprises" />
+      <meta name="theme-color" content="#008000" />
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph */}
