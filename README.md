@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# Shristi Enterprises — Modular Kitchen & Premium Interiors Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, highly interactive, and responsive web application designed for a premium modular kitchen and interior design business. Featuring clean glassmorphism styling, curated color palettes, smooth animations, and optimized SEO performance.
 
-Currently, two official plugins are available:
+## 🔗 Live Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application is deployed and live at:
+👉 **[shristienterprises.in](https://shristienterprises.in/)**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technology Stack
 
-## Expanding the ESLint configuration
+- **Core Framework**: React 19 (TypeScript)
+- **Build Tool**: Vite
+- **Styling**: Vanilla CSS (CSS Variables, Flexbox, CSS Grid)
+- **Animations**: Framer Motion
+- **Iconography**: Lucide React
+- **SEO & Metadata**: React Helmet Async & JSON-LD Structured Schema markup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Interactive Header & Navigation**: Dynamic responsive header with glassmorphism blurring on scroll, sliding mobile navigation drawer, and animated active route indicators.
+- **Service Categories Showcase**: Dedicated services section detailing various kitchen types (L-Shaped, U-Shaped, Island, Parallel) and interior solutions.
+- **Testimonial Slider**: Dynamic slider showcasing customer reviews and ratings.
+- **SEO Optimized**: Pre-configured meta tags, open graph attributes, apple-touch-icon, and structured schema markup to optimize local search engine discovery.
+- **Smooth Page Transitions**: Animate-on-scroll entry effects using Framer Motion.
+- **Custom Brand Identity**: Integrated bespoke transparent brand logo and custom multi-resolution favicon.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📁 Directory Structure
+
+```
+shristi/
+├── public/                 # Static assets (Favicons, Robots.txt)
+├── src/
+│   ├── assets/             # Images & visual media (Logo, kitchen categories)
+│   ├── components/         # Reusable React components (Navbar, Footer, SEOHead, Cards)
+│   ├── data/               # Static data structures (FAQs, Testimonials, Services list)
+│   ├── pages/              # Main view pages (Home, About, Services, Testimonials, Contact)
+│   ├── styles/             # Core design system stylesheet (globals.css)
+│   ├── App.tsx             # Root routing layout
+│   └── main.tsx            # Application entry point
+├── deploy.js               # Production deployment script
+├── vite.config.ts          # Vite bundler configuration
+└── package.json            # Dependencies and script definitions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Follow these instructions to run the project locally on your machine.
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed (LTS version recommended).
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Eshbanoliver/shristienterprises.git
+   ```
+
+2. Navigate to the project folder:
+   ```bash
+   cd shristi
+   ```
+
+3. Install project dependencies:
+   ```bash
+   npm install
+   ```
+
+### Scripts
+
+- **Start Local Server** (development mode with hot-module reloading):
+  ```bash
+  npm run dev
+  ```
+
+- **Production Build** (compiles TypeScript and bundles production-ready assets into the `dist/` directory):
+  ```bash
+  npm run build
+  ```
+
+- **Local Preview** (serve the compiled production build locally for testing):
+  ```bash
+  npm run preview
+  ```
+
+- **Lint Code** (check code consistency using ESLint):
+  ```bash
+  npm run lint
+  ```
+
+---
+
+## 🌐 Deployment
+
+The production deployment is configured using a custom SFTP-based publishing script. Once the site is built successfully, you can run the deployment task:
+
+```bash
+node deploy.js
 ```
