@@ -155,7 +155,11 @@ const Footer: React.FC = () => {
       <div className="footer__bottom">
         <div className="footer__container">
           <p className="footer__copyright">
-            ©️ Copyright {currentYear} | Shristi Enterprises | All Rights Reserved | Powered by{' '}
+            ©️ Copyright {currentYear} |{' '}
+            <Link to="/" className="footer__copyright-link">
+              Shristi Enterprises
+            </Link>{' '}
+            | All Rights Reserved | Powered by{' '}
             <a
               href="https://www.futurexdigitalmarketing.com/"
               target="_blank"

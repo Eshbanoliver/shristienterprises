@@ -245,6 +245,17 @@
   opacity: 0.8;
 }
 
+.footer__copyright-link {
+  color: inherit;
+  font-weight: 600;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.footer__copyright-link:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .footer__grid {
