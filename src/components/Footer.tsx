@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, ChefHat, Clock, ExternalLink } from 'lucide-react';
+import { Phone, MapPin, Clock, ExternalLink } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 import './Footer.css';
 
 const Footer: React.FC = () => {
@@ -41,7 +42,7 @@ const Footer: React.FC = () => {
             <div className="footer__brand">
               <div className="footer__logo">
                 <div className="footer__logo-icon">
-                  <ChefHat size={22} />
+                  <img src={logoImg} alt="" className="footer__logo-img" />
                 </div>
                 <div>
                   <span className="footer__logo-name">Shristi Enterprises</span>

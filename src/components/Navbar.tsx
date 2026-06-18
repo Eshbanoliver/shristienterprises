@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChefHat, Phone, MessageCircle } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 import './Navbar.css';
 
 const navLinks = [
@@ -45,7 +46,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="navbar__logo" aria-label="Shristi Enterprises Home">
             <div className="navbar__logo-icon">
-              <ChefHat size={22} />
+              <img src={logoImg} alt="" className="navbar__logo-img" />
             </div>
             <div className="navbar__logo-text">
               <span className="navbar__logo-name">Shristi</span>
@@ -111,7 +112,7 @@ const Navbar: React.FC = () => {
               <div className="navbar__mobile-header">
                 <div className="navbar__logo">
                   <div className="navbar__logo-icon">
-                    <ChefHat size={22} />
+                    <img src={logoImg} alt="" className="navbar__logo-img" />
                   </div>
                   <div className="navbar__logo-text">
                     <span className="navbar__logo-name">Shristi</span>
