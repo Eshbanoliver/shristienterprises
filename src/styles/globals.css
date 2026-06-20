@@ -48,7 +48,7 @@
 
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #008000 0%, #00a000 50%, #006400 100%);
-  --gradient-hero: linear-gradient(135deg, rgba(0,32,0,0.92) 0%, rgba(0,64,0,0.7) 50%, rgba(0,128,0,0.4) 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.55) 50%, rgba(15, 23, 42, 0.25) 100%);
   --gradient-section: linear-gradient(180deg, #F8FAFC 0%, #ffffff 100%);
   --gradient-dark: linear-gradient(135deg, #0F172A 0%, #1e293b 100%);
   --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
