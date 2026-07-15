@@ -22,7 +22,7 @@ const Services: React.FC = () => {
         title="Modular Kitchen Services Udaipur - Shristi Enterprises"
         description="Shristi Enterprises offers complete modular kitchen services in Udaipur — L-shaped, U-shaped, island, parallel kitchens, wardrobe design, cabinet manufacturing, kitchen renovation, and more."
         canonicalUrl="https://shristienterprises.in/services"
-        keywords="Modular Kitchen Services Udaipur, L-Shaped Kitchen Udaipur, U-Shaped Kitchen Udaipur, Island Kitchen Udaipur, Wardrobe Design Udaipur, Kitchen Renovation Udaipur"
+        keywords="Best Modular Kitchen in Udaipur, Modular Kitchen Designer in Udaipur, Modular Kitchen Manufacturer in Udaipur, Kitchen Interior Designer Udaipur, Affordable Modular Kitchen Udaipur, Modular Kitchen Services Udaipur, L-Shaped Kitchen Udaipur, U-Shaped Kitchen Udaipur, Island Kitchen Udaipur, Wardrobe Design Udaipur, Kitchen Renovation Udaipur"
       />
 
       {/* ── Page Hero ─── */}
