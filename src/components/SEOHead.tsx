@@ -50,7 +50,7 @@ const SCHEMA_MARKUP = {
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Shristi Enterprises - Modular Kitchen in Udaipur | Custom Kitchen Design',
-  description = 'Shristi Enterprises is a leading modular kitchen manufacturer in Udaipur. We offer custom L-shaped, U-shaped, island, and parallel kitchens with premium materials. 500+ projects completed. Call +91 98293 46870.',
+  description = 'Shristi Enterprises is a leading modular kitchen manufacturer in Udaipur. We offer custom L-shaped, U-shaped, island, and parallel kitchens with premium materials. 2500+ projects completed. Call +91 98293 46870.',
   keywords = 'Modular Kitchen in Udaipur, Modular Kitchen Manufacturer Udaipur, Custom Kitchen Design Udaipur, Kitchen Interior Udaipur, Modular Kitchen Services Udaipur',
   canonicalUrl = BASE_URL,
   ogImage = DEFAULT_OG_IMAGE,

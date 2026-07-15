@@ -63,6 +63,6 @@ export const faqs: FAQ[] = [
   {
     id: '12',
     question: 'What makes Shristi Enterprises different from other modular kitchen manufacturers?',
-    answer: 'What sets us apart is our commitment to quality craftsmanship, personalized service, and customer satisfaction. We have over 10 years of experience, an in-house manufacturing facility ensuring quality control, a dedicated design team, premium materials, and a track record of 500+ successful projects in Udaipur. We treat every project as if it were our own home.',
+    answer: 'What sets us apart is our commitment to quality craftsmanship, personalized service, and customer satisfaction. We have over 18 years of experience, an in-house manufacturing facility ensuring quality control, a dedicated design team, premium materials, and a track record of 2500+ successful projects in Udaipur. We treat every project as if it were our own home.',
   },
 ];

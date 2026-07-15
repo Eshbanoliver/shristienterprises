@@ -9,12 +9,12 @@ import './About.css';
 const WA_LINK = 'https://wa.me/919829346870?text=Hello%20Shristi%20Enterprises%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services.';
 
 const timeline = [
-  { year: '2014', icon: <Flag className="ct-icon" />, title: 'The Beginning', desc: 'Shristi Enterprises was founded in Udaipur with a simple mission — to provide premium quality modular kitchens at honest pricing.' },
-  { year: '2016', icon: <Trophy className="ct-icon" />, title: 'First 100 Projects', desc: 'Completed our first 100 kitchen installations, building a reputation for exceptional craftsmanship and customer service in Udaipur.' },
-  { year: '2018', icon: <Briefcase className="ct-icon" />, title: 'Expanded Services', desc: 'Expanded into complete interior solutions including wardrobe design, cabinet manufacturing, and interior consultation services.' },
+  { year: '2008', icon: <Flag className="ct-icon" />, title: 'The Beginning', desc: 'Shristi Enterprises was founded in Udaipur with a simple mission — to provide premium quality modular kitchens at honest pricing.' },
+  { year: '2012', icon: <Trophy className="ct-icon" />, title: 'First 100 Projects', desc: 'Completed our first 100 kitchen installations, building a reputation for exceptional craftsmanship and customer service in Udaipur.' },
+  { year: '2016', icon: <Briefcase className="ct-icon" />, title: 'Expanded Services', desc: 'Expanded into complete interior solutions including wardrobe design, cabinet manufacturing, and interior consultation services.' },
   { year: '2020', icon: <Factory className="ct-icon" />, title: 'Modern Manufacturing', desc: 'Upgraded to advanced CNC machinery and modern manufacturing processes, significantly improving precision and production capacity.' },
-  { year: '2022', icon: <Heart className="ct-icon" />, title: '400+ Happy Homes', desc: 'Milestone of 400+ successful kitchen installations, becoming one of Udaipur\'s most trusted modular kitchen brands.' },
-  { year: '2024+', icon: <TrendingUp className="ct-icon" />, title: 'Growing Stronger', desc: 'Continuing to serve Udaipur and surrounding Rajasthan areas, expanding our showroom and adding new design capabilities.' },
+  { year: '2024', icon: <Heart className="ct-icon" />, title: '2000+ Happy Homes', desc: 'Milestone of 2000+ successful kitchen and interior installations, becoming one of Udaipur\'s most trusted home design brands.' },
+  { year: '2026+', icon: <TrendingUp className="ct-icon" />, title: 'Growing Stronger', desc: 'Continuing to serve Udaipur and surrounding Rajasthan areas with 18+ years of expertise and over 2500 completed projects.' },
 ];
 
 const expertise = [
@@ -45,8 +45,8 @@ const expertise = [
 ];
 
 const trustFeatures = [
-  { icon: <Trophy size={28} />, title: '10+ Years Experience', desc: 'Over a decade of transforming kitchens and spaces in Udaipur with consistent excellence.', colorClass: 'trust-card--amber' },
-  { icon: <BadgeCheck size={28} />, title: '500+ Projects Delivered', desc: 'Half a thousand successful kitchen installations — each one a testament to our quality.', colorClass: 'trust-card--emerald' },
+  { icon: <Trophy size={28} />, title: '18+ Years Experience', desc: 'Nearly two decades of transforming kitchens and spaces in Udaipur with consistent excellence.', colorClass: 'trust-card--amber' },
+  { icon: <BadgeCheck size={28} />, title: '2500+ Projects Delivered', desc: 'Over two thousand five hundred successful kitchen and interior installations — each one a testament to our quality.', colorClass: 'trust-card--emerald' },
   { icon: <ShieldCheck size={28} />, title: '5-Year Structural Warranty', desc: 'Comprehensive warranty coverage giving you complete peace of mind after installation.', colorClass: 'trust-card--cyan' },
   { icon: <Gem size={28} />, title: 'Premium Materials Only', desc: 'We never compromise on material quality — only the best marine ply and hardware brands.', colorClass: 'trust-card--rose' },
   { icon: <Clock3 size={28} />, title: 'On-Time Delivery', desc: 'We respect your time. Projects delivered on the committed date, every single time.', colorClass: 'trust-card--violet' },
@@ -58,7 +58,7 @@ const About: React.FC = () => {
     <>
       <SEOHead
         title="About Us - Shristi Enterprises Modular Kitchen Manufacturer Udaipur"
-        description="Learn about Shristi Enterprises, Udaipur's trusted modular kitchen manufacturer with 10+ years of experience, 500+ projects completed. We specialize in custom modular kitchens and interior solutions in Rajasthan."
+        description="Learn about Shristi Enterprises, Udaipur's trusted modular kitchen manufacturer with 18+ years of experience, 2500+ projects completed. We specialize in custom modular kitchens and interior solutions in Rajasthan."
         canonicalUrl="https://shristienterprises.in/about"
       />
 
@@ -87,19 +87,19 @@ const About: React.FC = () => {
                 Crafting Spaces That <span className="text-gradient">Inspire</span> Every Day.
               </h1>
               <p className="ahc-subtitle">
-                A decade of dedication, precision, and passion for transforming ordinary houses into extraordinary homes across Udaipur.
+                Nearly two decades of dedication, precision, and passion for transforming ordinary houses into extraordinary homes across Udaipur.
               </p>
               
               <div className="ahc-actions">
                  <div className="ahc-stats-mini">
-                    <div className="ahc-stat-item">
-                       <span className="ahc-stat-num">10+</span>
-                       <span className="ahc-stat-label">Years of<br/>Excellence</span>
-                    </div>
-                    <div className="ahc-stat-item">
-                       <span className="ahc-stat-num">500+</span>
-                       <span className="ahc-stat-label">Projects<br/>Delivered</span>
-                    </div>
+                     <div className="ahc-stat-item">
+                        <span className="ahc-stat-num">18+</span>
+                        <span className="ahc-stat-label">Years of<br/>Excellence</span>
+                     </div>
+                     <div className="ahc-stat-item">
+                        <span className="ahc-stat-num">2500+</span>
+                        <span className="ahc-stat-label">Projects<br/>Delivered</span>
+                     </div>
                  </div>
               </div>
             </motion.div>
@@ -180,8 +180,8 @@ const About: React.FC = () => {
 
               <div className="about-stats-cards">
                 {[
-                  { value: '500+', label: 'Projects Completed' },
-                  { value: '10+', label: 'Years Experience' },
+                  { value: '2500+', label: 'Projects Completed' },
+                  { value: '18+', label: 'Years Experience' },
                   { value: '1000+', label: 'Happy Customers' },
                 ].map((s, idx) => (
                   <motion.div 
@@ -233,7 +233,7 @@ const About: React.FC = () => {
                   animate={{ y: [10, -10, 10] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 >
-                  <strong>10+</strong>
+                  <strong>18+</strong>
                   <span>Years of<br/>Trust</span>
                 </motion.div>
               </div>

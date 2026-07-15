@@ -153,7 +153,7 @@ const Testimonials: React.FC = () => {
         <div className="container">
           <h2 id="stats-heading" className="sr-only">Satisfaction Statistics</h2>
           <div className="satisfaction-grid">
-            <AnimatedCounter target={500} suffix="+" label="Projects Completed" icon={<Award size={28} />} />
+            <AnimatedCounter target={2500} suffix="+" label="Projects Completed" icon={<Award size={28} />} />
             <AnimatedCounter target={1000} suffix="+" label="Happy Customers" icon={<Users size={28} />} />
             <AnimatedCounter target={100} suffix="%" label="Customer Satisfaction" icon={<Heart size={28} />} />
             <AnimatedCounter target={5} label="Star Average Rating" icon={<Star size={28} />} />

@@ -34,8 +34,8 @@ const previewServices = services.slice(0, 6);
 // const previewTestimonials = testimonials.slice(0, 3);
 
 const metrics = [
-  { target: 500, suffix: '+', label: 'Projects Completed', icon: <Briefcase size={28} /> },
-  { target: 10, suffix: '+', label: 'Years Experience', icon: <Award size={28} /> },
+  { target: 2500, suffix: '+', label: 'Projects Completed', icon: <Briefcase size={28} /> },
+  { target: 18, suffix: '+', label: 'Years Experience', icon: <Award size={28} /> },
   { target: 100, suffix: '%', label: 'Customer Satisfaction', icon: <Heart size={28} /> },
   { target: 1000, suffix: '+', label: 'Happy Customers', icon: <Users size={28} /> },
 ];
@@ -50,7 +50,7 @@ const coreValues = [
 ];
 
 const whyChooseUs = [
-  { icon: <Users size={22} />, title: 'Experienced Team', desc: '10+ years of skilled craftsmanship' },
+  { icon: <Users size={22} />, title: 'Experienced Team', desc: '18+ years of skilled craftsmanship' },
   { icon: <Zap size={22} />, title: 'Custom Designs', desc: 'Tailored to your exact taste and space' },
   { icon: <Shield size={22} />, title: 'Premium Materials', desc: 'Only top-grade materials used' },
   { icon: <Clock size={22} />, title: 'Timely Delivery', desc: 'Projects completed on schedule' },
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
     <>
       <SEOHead
         title="Shristi Enterprises - Modular Kitchen in Udaipur | Custom Kitchen Design"
-        description="Shristi Enterprises is Udaipur's most trusted modular kitchen manufacturer. Custom L-shaped, U-shaped, island, parallel kitchens with premium materials. 500+ projects. Call +91 98293 46870."
+        description="Shristi Enterprises is Udaipur's most trusted modular kitchen manufacturer. Custom L-shaped, U-shaped, island, parallel kitchens with premium materials. 2500+ projects. Call +91 98293 46870."
         canonicalUrl="https://shristienterprises.in"
       />
 
@@ -131,7 +131,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.45 }}
             >
-              Crafting beautiful, functional, and space-optimized modular kitchens in Udaipur since 10+ years. From custom L-shaped to luxury island kitchens — your dream space is one call away.
+              Crafting beautiful, functional, and space-optimized modular kitchens in Udaipur since 18+ years. From custom L-shaped to luxury island kitchens — your dream space is one call away.
             </motion.p>
 
             <motion.div
@@ -157,7 +157,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
             >
-              {['500+ Projects', '10+ Years', 'Free Consultation', '5-Year Warranty'].map((tag) => (
+              {['2500+ Projects', '18+ Years', 'Free Consultation', '5-Year Warranty'].map((tag) => (
                 <span key={tag} className="hero__trust-tag">
                   <CheckCircle2 size={14} /> {tag}
                 </span>
@@ -211,7 +211,7 @@ const Home: React.FC = () => {
               <div className="about-preview__badge-card glass-card">
                 <Award size={24} />
                 <div>
-                  <strong>10+ Years</strong>
+                  <strong>18+ Years</strong>
                   <span>Trusted Excellence</span>
                 </div>
               </div>
@@ -231,7 +231,7 @@ const Home: React.FC = () => {
               </h2>
               <div className="divider" />
               <p className="about-preview__text">
-                Shristi Enterprises is a premier modular kitchen manufacturer and interior solutions provider based in Udaipur, Rajasthan. With over a decade of expertise, we have transformed 500+ homes with beautifully crafted, space-optimized kitchen solutions.
+                Shristi Enterprises is a premier modular kitchen manufacturer and interior solutions provider based in Udaipur, Rajasthan. With nearly two decades of expertise, we have transformed 2500+ homes with beautifully crafted, space-optimized kitchen solutions.
               </p>
               <ul className="about-preview__features">
                 {[
