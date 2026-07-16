@@ -6,7 +6,7 @@ const config = {
   host: '89.117.188.170',
   port: 65002,
   username: 'u244945997',
-  password: 'Futurex@1234'
+  password: 'Shristi@1234'
 };
 
 const conn = new Client();

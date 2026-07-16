@@ -257,20 +257,21 @@ const Home: React.FC = () => {
 
       {/* ═══════════════ METRICS ═══════════════ */}
       <section className="metrics-section" aria-labelledby="metrics-heading">
-        <div className="metrics-section__bg" aria-hidden="true" />
         <div className="container">
-          <h2 id="metrics-heading" className="sr-only">Key Metrics</h2>
-          <div className="metrics-grid">
-            {metrics.map((m) => (
-              <AnimatedCounter
-                key={m.label}
-                target={m.target}
-                suffix={m.suffix}
-                label={m.label}
-                icon={m.icon}
-                duration={2.5}
-              />
-            ))}
+          <div className="metrics-section__inner">
+            <h2 id="metrics-heading" className="sr-only">Key Metrics</h2>
+            <div className="metrics-grid">
+              {metrics.map((m) => (
+                <AnimatedCounter
+                  key={m.label}
+                  target={m.target}
+                  suffix={m.suffix}
+                  label={m.label}
+                  icon={m.icon}
+                  duration={2.5}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
