@@ -1,109 +1,100 @@
-# Shristi Enterprises — Modular Kitchen & Premium Interiors Web App
+# Modular Kitchen & Premium Interiors Web Application
 
-A modern, highly interactive, and responsive web application designed for a premium modular kitchen and interior design business. Featuring clean glassmorphism styling, curated color palettes, smooth animations, and optimized SEO performance.
-
-## 🔗 Live Application
-
-The application is deployed and live at:
-👉 **[shristienterprises.in](https://shristienterprises.in/)**
+A modern, highly interactive, and responsive web application designed for modular kitchen and interior design showcase services. Built with high performance, clean glassmorphism aesthetics, fluid micro-animations, dynamic routing, and search engine optimization (SEO) in mind.
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Tech Stack
 
-- **Core Framework**: React 19 (TypeScript)
-- **Build Tool**: Vite
-- **Styling**: Vanilla CSS (CSS Variables, Flexbox, CSS Grid)
-- **Animations**: Framer Motion
-- **Iconography**: Lucide React
-- **SEO & Metadata**: React Helmet Async & JSON-LD Structured Schema markup
+- **Frontend Framework**: [React 19](https://react.dev/) (TypeScript)
+- **Build Tool & Dev Server**: [Vite](https://vitejs.dev/)
+- **Styling**: Vanilla CSS (CSS Custom Properties, Modern Flexbox & CSS Grid Layouts)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **SEO & Metadata**: [React Helmet Async](https://github.com/stayuncurious/react-helmet-async) & Structured JSON-LD Schema
 
 ---
 
 ## ✨ Features
 
-- **Interactive Header & Navigation**: Dynamic responsive header with glassmorphism blurring on scroll, sliding mobile navigation drawer, and animated active route indicators.
-- **Service Categories Showcase**: Dedicated services section detailing various kitchen types (L-Shaped, U-Shaped, Island, Parallel) and interior solutions.
-- **Testimonial Slider**: Dynamic slider showcasing customer reviews and ratings.
-- **SEO Optimized**: Pre-configured meta tags, open graph attributes, apple-touch-icon, and structured schema markup to optimize local search engine discovery.
-- **Smooth Page Transitions**: Animate-on-scroll entry effects using Framer Motion.
-- **Custom Brand Identity**: Integrated bespoke transparent brand logo and custom multi-resolution favicon.
+- **Responsive & Interactive Navigation**: Glassmorphic sticky header with backdrop blur, sliding mobile drawer navigation, and active path highlights.
+- **Dynamic Service Catalog**: Categorized showcases for modular kitchens (L-Shaped, U-Shaped, Parallel, Island) and specialized interior design solutions.
+- **Smooth Page Transitions & Scroll Animations**: Micro-interactions and animate-on-scroll effects powered by Framer Motion.
+- **SEO Ready**: Pre-configured dynamic meta tags, Open Graph card metadata, and JSON-LD structured schema for search engines.
+- **Testimonial & Review Section**: Interactive customer feedback showcase and rating components.
+- **Clean Architecture**: Modular UI components, isolated CSS stylesheets, and strongly typed data models.
 
 ---
 
-## 📁 Directory Structure
+## 📁 Project Structure
 
 ```
-shristi/
-├── public/                 # Static assets (Favicons, Robots.txt)
+├── public/                 # Static assets (Favicons, web manifest, robots.txt)
 ├── src/
-│   ├── assets/             # Images & visual media (Logo, kitchen categories)
-│   ├── components/         # Reusable React components (Navbar, Footer, SEOHead, Cards)
-│   ├── data/               # Static data structures (FAQs, Testimonials, Services list)
-│   ├── pages/              # Main view pages (Home, About, Services, Testimonials, Contact)
-│   ├── styles/             # Core design system stylesheet (globals.css)
-│   ├── App.tsx             # Root routing layout
-│   └── main.tsx            # Application entry point
-├── deploy.js               # Production deployment script
+│   ├── assets/             # Branding assets, icons, and media files
+│   ├── components/         # Reusable UI components (Navbar, Footer, SEOHead, Cards)
+│   ├── data/               # Structured static content (Services, Testimonials, FAQs)
+│   ├── pages/              # Page view components (Home, About, Services, Contact, etc.)
+│   ├── styles/             # Global stylesheets and design tokens
+│   ├── App.tsx             # Application router layout
+│   └── main.tsx            # Application mounting entry point
 ├── vite.config.ts          # Vite bundler configuration
-└── package.json            # Dependencies and script definitions
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Node dependencies and project scripts
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-Follow these instructions to run the project locally on your machine.
+Follow these steps to set up and run the project locally on your machine.
 
 ### Prerequisites
 
-Ensure you have [Node.js](https://nodejs.org/) installed (LTS version recommended).
+- [Node.js](https://nodejs.org/) (v18.0.0 or later recommended)
+- `npm` (comes bundled with Node.js) or `pnpm` / `yarn`
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Eshbanoliver/shristienterprises.git
+   git clone https://github.com/your-username/your-repo-name.git
    ```
 
-2. Navigate to the project folder:
+2. **Navigate into the project directory**:
    ```bash
-   cd shristi
+   cd your-repo-name
    ```
 
-3. Install project dependencies:
+3. **Install dependencies**:
    ```bash
    npm install
    ```
 
-### Scripts
+---
 
-- **Start Local Server** (development mode with hot-module reloading):
-  ```bash
-  npm run dev
-  ```
+## 📜 Available Scripts
 
-- **Production Build** (compiles TypeScript and bundles production-ready assets into the `dist/` directory):
-  ```bash
-  npm run build
-  ```
+In the project directory, you can run the following commands:
 
-- **Local Preview** (serve the compiled production build locally for testing):
-  ```bash
-  npm run preview
-  ```
-
-- **Lint Code** (check code consistency using ESLint):
-  ```bash
-  npm run lint
-  ```
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Runs the app in development mode with Hot Module Replacement (HMR) at `http://localhost:5173`. |
+| `npm run build` | Type-checks code using `tsc` and compiles optimized production assets into `dist/`. |
+| `npm run preview` | Serves the production build locally for testing before deployment. |
+| `npm run lint` | Runs ESLint to check for syntax issues, formatting errors, and best practices. |
 
 ---
 
-## 🌐 Deployment
+## ⚙️ Configuration & Customization
 
-The production deployment is configured using a custom SFTP-based publishing script. Once the site is built successfully, you can run the deployment task:
+- **Site Metadata**: Update meta tags, site titles, and social previews in `src/components/SEOHead.tsx` or page-level components.
+- **Data Content**: Business services, customer testimonials, and contact details can be modified in `src/data/`.
+- **Styling**: Base colors, typography scale, glassmorphic styles, and CSS variables are managed in `src/styles/`.
 
-```bash
-node deploy.js
-```
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
