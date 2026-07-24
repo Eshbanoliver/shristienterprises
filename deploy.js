@@ -6,10 +6,15 @@ const config = {
   host: '89.117.188.170',
   port: 65002,
   username: 'u244945997',
-  password: 'Shristi@13579'
+  password: 'Shristi@13579',
+  tryKeyboard: true
 };
 
 const conn = new Client();
+
+conn.on('keyboard-interactive', (name, instructions, instructionsLang, prompts, finish) => {
+  finish([config.password]);
+});
 
 function executeCommand(conn, cmd) {
   return new Promise((resolve, reject) => {
