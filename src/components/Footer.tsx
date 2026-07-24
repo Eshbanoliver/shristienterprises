@@ -12,6 +12,7 @@ const Footer: React.FC = () => {
     { path: '/about', label: 'About Us' },
     { path: '/services', label: 'Services' },
     { path: '/testimonials', label: 'Testimonials' },
+    { path: '/blog', label: 'Blog & Guides' },
     { path: '/contact', label: 'Contact Us' },
   ];
 

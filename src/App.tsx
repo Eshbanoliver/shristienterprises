@@ -12,6 +12,8 @@ const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogDetail = lazy(() => import('./pages/BlogDetail'));
 
 const PageLoadingFallback: React.FC = () => (
   <div style={{
@@ -101,6 +103,26 @@ const AppRoutes: React.FC = () => {
             <PageTransition>
               <Suspense fallback={<PageLoadingFallback />}>
                 <Contact />
+              </Suspense>
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <PageTransition>
+              <Suspense fallback={<PageLoadingFallback />}>
+                <Blog />
+              </Suspense>
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/blog/:slug"
+          element={
+            <PageTransition>
+              <Suspense fallback={<PageLoadingFallback />}>
+                <BlogDetail />
               </Suspense>
             </PageTransition>
           }
