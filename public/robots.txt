@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://shristienterprises.in/sitemap.xml
+Sitemap: https://shristimodularkitchen.com/sitemap.xml

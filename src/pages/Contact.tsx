@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
       <SEOHead
         title="Contact Shristi Enterprises - Modular Kitchen in Udaipur"
         description="Contact Shristi Enterprises for modular kitchen services in Udaipur. Call +91 98293 46870, visit us at Gali 4/1, Ashwini Bazaar Road, Udaipur. Free consultation available."
-        canonicalUrl="https://shristienterprises.in/contact"
+        canonicalUrl="https://shristimodularkitchen.com/contact"
       />
 
       {/* ── Contact Hero ─── */}

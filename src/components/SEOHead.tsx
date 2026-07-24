@@ -10,7 +10,7 @@ interface SEOHeadProps {
   pageType?: 'website' | 'article';
 }
 
-const BASE_URL = 'https://shristienterprises.in';
+const BASE_URL = 'https://shristimodularkitchen.com';
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 const SCHEMA_MARKUP = {

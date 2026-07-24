@@ -127,7 +127,7 @@ const Testimonials: React.FC = () => {
       <SEOHead
         title="Customer Reviews & Testimonials - Shristi Enterprises Udaipur"
         description="Read what our happy customers say about Shristi Enterprises modular kitchens in Udaipur. 1000+ satisfied customers, 5-star reviews, real testimonials from real homeowners."
-        canonicalUrl="https://shristienterprises.in/testimonials"
+        canonicalUrl="https://shristimodularkitchen.com/testimonials"
       />
 
       {/* ── Page Hero ─── */}

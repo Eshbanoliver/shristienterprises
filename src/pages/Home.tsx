@@ -75,7 +75,7 @@ const Home: React.FC = () => {
       <SEOHead
         title="Shristi Enterprises - Modular Kitchen in Udaipur | Custom Kitchen Design"
         description="Shristi Enterprises is Udaipur's most trusted modular kitchen manufacturer. Custom L-shaped, U-shaped, island, parallel kitchens with premium materials. 2500+ projects. Call +91 98293 46870."
-        canonicalUrl="https://shristienterprises.in"
+        canonicalUrl="https://shristimodularkitchen.com"
       />
 
       {/* ═══════════════ HERO SECTION ═══════════════ */}

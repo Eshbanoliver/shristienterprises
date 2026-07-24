@@ -59,7 +59,7 @@ const About: React.FC = () => {
       <SEOHead
         title="About Us - Shristi Enterprises Modular Kitchen Manufacturer Udaipur"
         description="Learn about Shristi Enterprises, Udaipur's trusted modular kitchen manufacturer with 18+ years of experience, 2500+ projects completed. We specialize in custom modular kitchens and interior solutions in Rajasthan."
-        canonicalUrl="https://shristienterprises.in/about"
+        canonicalUrl="https://shristimodularkitchen.com/about"
       />
 
       {/* ── Creative Page Hero ─── */}
