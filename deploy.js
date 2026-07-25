@@ -1,13 +1,24 @@
 import { Client } from 'ssh2';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
+
+let privateKey;
+try {
+  const keyPath = path.join(os.homedir(), '.ssh', 'id_ed25519');
+  if (fs.existsSync(keyPath)) {
+    privateKey = fs.readFileSync(keyPath);
+  }
+} catch (e) {}
 
 const config = {
   host: '89.117.188.170',
   port: 65002,
   username: 'u244945997',
   password: 'Shristi@13579',
-  tryKeyboard: true
+  ...(privateKey ? { privateKey } : {}),
+  tryKeyboard: true,
+  readyTimeout: 20000
 };
 
 const conn = new Client();
