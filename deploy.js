@@ -12,7 +12,7 @@ try {
 } catch (e) {}
 
 const config = {
-  host: '89.117.188.170',
+  host: '2a02:4780:11:1048:0:e99:944d:10',
   port: 65002,
   username: 'u244945997',
   password: 'Shristi@13579',
