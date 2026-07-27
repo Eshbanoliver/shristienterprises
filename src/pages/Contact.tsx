@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
       e.name = 'Name must be at least 2 characters';
     }
 
-    const cleanPhone = formData.phone.replace(/[\s\-\+\(\)]/g, '');
+    const cleanPhone = formData.phone.replace(/[\s+()-]/g, '');
     const isValidPhone = /^(?:91|0)?[6-9]\d{9}$/.test(cleanPhone);
     if (!formData.phone.trim()) {
       e.phone = 'Phone number is required';

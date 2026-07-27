@@ -24,10 +24,12 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  const [prevPathname, setPrevPathname] = useState(location.pathname);
 
-  useEffect(() => {
+  if (prevPathname !== location.pathname) {
+    setPrevPathname(location.pathname);
     setMenuOpen(false);
-  }, [location.pathname]);
+  }
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
